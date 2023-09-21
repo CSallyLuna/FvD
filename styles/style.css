@@ -5,11 +5,6 @@
   box-sizing:border-box;  
 }
 
-section img:first-of-type {
-	
-
-
-}
 
 
 
@@ -33,3 +28,6 @@ section img:first-of-type {
 
 /* jouw code */
 
+img {
+	height: 2em;
+}

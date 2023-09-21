@@ -40,12 +40,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://studio-lofigirl.com/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/studio-lofigirl.com-HOME-MOBILE.png" width="375px" alt="omschrijving van de pagina">
+  Lofi Studio - Home
+  <img src="readme-images/studio-lofigirl.com-HOME-MOBILE.png" width="375px" alt="Lofi Studio is een groep animators, illustrators en andere artiesten die zich focusen op het creeren van mooie visuals en partneren met bekende brands als Disney en Psyonix">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/studio-lofigirl.com-PROJECTS-MOBILE.png" width="375px" alt="omschrijving van de pagina">
+   Lofi Studio - Projects  
+  <img src="readme-images/studio-lofigirl.com-PROJECTS-MOBILE.png" width="375px" alt="In deze pagina kun je alle projecten vinden waar leden van Lofi Studios aan hebben gewerkt.">
  
 </details>
 
@@ -58,6 +58,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  <img src="readme-images/Lofi Studios - validator.w3.org.png">
 
 </details>
 
@@ -69,13 +70,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/BREAKDOWN-SCHETS-MOBILE-HOME" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
