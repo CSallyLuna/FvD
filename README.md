@@ -70,7 +70,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/BREAKDOWN-SCHETS-MOBILE-HOME" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/BREAKDOWN SCHETS - MOBILE - HOME.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/" width="375px" alt="breakdown van een dynamisch deel">
@@ -96,20 +96,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | student 1: Caynalin    |
+  - Is mn Html goed so far?
+  - Hoe doe ik de logo animatie?
+  - font toevoegen?
+  - Is de website challenging genoeg?
+  - Doe ik de services als grid of UL?
+  - Hoe creer ik de banner? 
+  - Moet de titel als H1 of als Img?
+  - Ja ik moet nog alt texten toevoegen voor e reader.
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Span, hoe ik dingen kan verbergen die ik wel wil horen in een screen reader. Bij het maken van de lofi titel die een png op de originele website is. Src = https://www.a11yproject.com/posts/how-to-hide-content/ 
+  - geen articles gebruiken als je niet weet wat het zijn.
+  - Grid is css
 
 </details>
 
