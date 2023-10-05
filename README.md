@@ -128,14 +128,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  - Volgensmij ging de opstelling van de content in mijn  website goed. Het meeste kon ik wel geordend er alvast in zetten.
+  - De theorie van de les (hamburger menu oefenig) gaat iets minder goed. Ik probeer een hamburger menu te coderen op mijn website, maar dit moet ik wat vaker oefenen om het werkend te krijgen.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   ### Vragen voor 2e voortgang gesprek
-
- | student 1: Caynalin    |
- - Waar kan ik het beste de HOME_BACKGROUND_ART.JPG plaatsen? Header? Main?
+  | student 1: Caynalin    |
+  - Waar kan ik het beste de HOME_BACKGROUND_ART.JPG plaatsen? Header? Main?
 
 Main/Sectie 3
 - mag je meerdere h2 hebben in 1 section? (relevant voor section 3)
@@ -148,6 +149,12 @@ Main/sectie 4
 - kan ik <b> en <br> gebruiken voor readability en hoe accessable is het?
 - heb ik sectie 4 goed opgesteld? Img, h2, h3 , br, b, etc.
 
+ | student 2: Zineb    |
+ Mag ik 2 classes gebruiken voor 2 pagina’s (home & shop) Zodat mijn css niet kapot gaat op de andere pagina en mijn codes worden overschrijdt door elkaar omdat de andere pagina ook een body, main heeft. 
+Veel css code voor 1 section, nodig of overbodig? Is mijn manier :nt-first-of-type handig? Of kan het overzichtelijker met andere selectoren?
+“Shop producten” (h1) komt niet boven mijn grid layout te staan, van alles geprobeerd. 
+Grid layout mobile first > hoe kan ik het op desktop anders laten zien. 
+Blokje “the lift kit” wil ik position:absolute gebruiken maar kan ik dit in een div doen of bijvoorbeeld section in een section? Omdat het een aparte content blokje is in de section.  
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen

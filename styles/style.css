@@ -27,16 +27,30 @@
 /****************/
 /*  jouw code   */
 
+/* TEMPORARY SIZE FOR ALL IMAGES WHILE CODING */
+img {
+	height: 2em;
+}
 
+/******************************************************/
+/* styling voor de small-screen versie van de website */
+/******************************************************/
 
 /****************/
-/* Titel */
+/* Header */
 /****************/
+
 
 header {
+	min-height:4em;
+	padding:0 1em;
+	background-image:var(--header-gradient);
+	line-height:1;
+
 	background-color: red;
 	position:relative;
-
+	
+	/* JOUW CODE HIER - stap 3 */
 	display: flex;
 	justify-content:space-between;
 	align-items:center;
@@ -54,10 +68,65 @@ h1 {
 	align-items:center;
 }
 
-img {
-	height: 2em;
+/********/
+/* MENU */
+/********/
+
+nav {
+	/* JOUW CODE HIER - stap 1 */
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+
+	/* JOUW CODE HIER - stap 2 */
+	translate: -98% 0%;
+
+	/* JOUW CODE HIER - stap 4 */
+	transition:.1s;
 }
 
+header>button {
+	order:-1;
+}
+
+/* als menu open is */
+nav.open {
+	/* JOUW CODE HIER - stap 4 */
+	translate: 0 0;
+	transition:.5s;
+}
+
+/***************/
+/* MENU BUTTON */
+/***************/
+
+header > button {
+	/* JOUW CODE HIER - stap 3 */
+	order:-1;
+}
+
+/***************/
+/* SLUIT BUTTON */
+/***************/
+  nav button {
+   justify-self:start;
+}
+
+/***************/
+/*  BANNER */
+/***************/
+#backgroundart {
+	width: 100%;
+	height: 100%;
+	/* background-position: 50%; */
+	background-size:cover;
+}
+
+/********************************/
+/*  LOFI STUDIO TITEL ALS H1 */
+/*************************8******/
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 /* Waarom? Helpt de png titel "lofi Studio" leesbaar zijn voor e-reader en leesbaar als de h1 */
 .visually-hidden {
@@ -80,32 +149,5 @@ img {
   }
 
 
-  /****************/
-/* HOME BACKGROUND ART */
-/****************/
-
-#backgroundart {
-	width: 100%;
-	height: 100%;
-	/* background-position: 50%; */
-	background-size:cover;
-}
 
 
-  /****************/
-/*  MENU */
-/****************/
-
-nav {
-	position:fixed;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-
-	translate: -98% 0%;
-}
-
-header>button {
-	order:-1;
-}
