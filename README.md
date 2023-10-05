@@ -156,6 +156,16 @@ Veel css code voor 1 section, nodig of overbodig? Is mijn manier :nt-first-of-ty
 Grid layout mobile first > hoe kan ik het op desktop anders laten zien. 
 Blokje “the lift kit” wil ik position:absolute gebruiken maar kan ik dit in een div doen of bijvoorbeeld section in een section? Omdat het een aparte content blokje is in de section.  
 
+Hidde van der Plaat
+- Is het gebruik van een media query voor responsive font sizes een goed idee?
+- Hoe kan ik het beste het main element indelen? ik heb nu een section met kleinere sections erin.
+- Hoe kan ik het beste het grid-template vormgeven zodat deze responsive is? ik probeer namelijk een max-height te gebruiken maar dit lukt niet helemaal.
+- Ik gebruik nu veel percentages als schaal. Is dat wenselijk?
+
+Danisha Kreuning
+Mijn achtergrond heeft een soort overlay foto, hoe kan ik dit het beste toepassen?
+Hoe kan ik de afbeelding groottes aanpassen zonder de hele foto gelijk te vervormen?
+
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
