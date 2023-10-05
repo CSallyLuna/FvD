@@ -132,11 +132,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  ### Vragen voor 2e voortgang gesprek
+
+ | student 1: Caynalin    |
+ - Waar kan ik het beste de HOME_BACKGROUND_ART.JPG plaatsen? Header? Main?
+
+Main/Sectie 3
+- mag je meerdere h2 hebben in 1 section? (relevant voor section 3)
+- Hoe kan ik er voor zorgen dat een e-reader weet welke H2 hoort bij welke p binnen dezelfde sectie als er meerdere h2 en p’s zijn? (relevant voor section 3)
+- Heb ik bij sectie 3 correct de SPAN  en IMG gebruikt in de h2’s?
+- kan ik voor sectie 3 de volgende methode toepassen voor de iconen https://fontawesome.com/docs/web/dig-deeper/accessibility
+Zijn de iconen decoratief of een semantisch element?
+
+Main/sectie 4
+- kan ik <b> en <br> gebruiken voor readability en hoe accessable is het?
+- heb ik sectie 4 goed opgesteld? Img, h2, h3 , br, b, etc.
 
 
   ### Verslag van meeting
