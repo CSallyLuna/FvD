@@ -16,6 +16,11 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+
+}
+
+body {
+	margin:0;
 }
 
 
@@ -28,9 +33,9 @@
 /*  jouw code   */
 
 /* TEMPORARY SIZE FOR ALL IMAGES WHILE CODING */
-img {
+/* img {
 	height: 2em;
-}
+} */
 
 /******************************************************/
 /* styling voor de small-screen versie van de website */
@@ -41,20 +46,55 @@ img {
 /****************/
 
 
-header {
-	min-height:4em;
-	padding:0 1em;
-	background-image:var(--header-gradient);
-	line-height:1;
+body > header {
+	position: fixed;
+	height:3rem;
+    width: 100%;
+	background-color:#2A1A19;
 
-	background-color: red;
-	position:relative;
+	/* min-height:4em;
+	padding:0 1em;
+	
+	line-height:1; */
+
+	/* position:relative; */
 	
 	/* JOUW CODE HIER - stap 3 */
 	display: flex;
 	justify-content:space-between;
 	align-items:center;
 }
+
+
+main > header{
+	background: url(../images/Home_Background_Art.jpg);
+	background-position: center;
+
+	height: 100vh;
+
+	Display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+/********************************/
+/*  LOGO */
+/********************************/
+
+header a img {
+	position:absolute;
+	top:0;
+	left:0;
+
+	width: 2em;
+	
+}
+
+
+
+/********************************/
+/*  H1: LOFI STUDIO */
+/*************************8******/
 
 h1 {
 	position:absolute;
@@ -68,65 +108,11 @@ h1 {
 	align-items:center;
 }
 
-/********/
-/* MENU */
-/********/
+h1 img {
+	width:60%;
 
-nav {
-	/* JOUW CODE HIER - stap 1 */
-	position:fixed;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-
-	/* JOUW CODE HIER - stap 2 */
-	translate: -98% 0%;
-
-	/* JOUW CODE HIER - stap 4 */
-	transition:.1s;
 }
 
-header>button {
-	order:-1;
-}
-
-/* als menu open is */
-nav.open {
-	/* JOUW CODE HIER - stap 4 */
-	translate: 0 0;
-	transition:.5s;
-}
-
-/***************/
-/* MENU BUTTON */
-/***************/
-
-header > button {
-	/* JOUW CODE HIER - stap 3 */
-	order:-1;
-}
-
-/***************/
-/* SLUIT BUTTON */
-/***************/
-  nav button {
-   justify-self:start;
-}
-
-/***************/
-/*  BANNER */
-/***************/
-#backgroundart {
-	width: 100%;
-	height: 100%;
-	/* background-position: 50%; */
-	background-size:cover;
-}
-
-/********************************/
-/*  LOFI STUDIO TITEL ALS H1 */
-/*************************8******/
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 /* Waarom? Helpt de png titel "lofi Studio" leesbaar zijn voor e-reader en leesbaar als de h1 */
 .visually-hidden {
@@ -139,15 +125,94 @@ header > button {
 	width: 1px;
   }
 
-  header nav a {
-	text-transform: uppercase;
-  }
   
   /* attribuut selector */
   [aria-current="page"] {
 	color:red;
   }
 
+  
+/********/
+/* MENU */
+/********/
 
+nav {
+	/* JOUW CODE HIER - stap 1 */
+	position:fixed;
+	top:0;
+	right:0;
+	left:0;
+
+	padding:1em;
+
+	display:grid;
+	align-content:start;
+	gap:1em;
+	
+	background-color: #F9EACC;
+
+	/* JOUW CODE HIER - stap 2 */
+	translate:0% -100%;
+
+	/* JOUW CODE HIER - stap 4 */
+	transition:.1s;
+}
+
+header nav a {
+	text-transform: uppercase;
+  }
+
+header button {
+	order:-1;
+}
+
+/* als menu open is */
+nav.open {
+	/* JOUW CODE HIER - stap 4 */
+	translate:0 0;
+
+	transition:.5s;
+}
+
+/***************/
+/* MENU BUTTON */
+/***************/
+
+header > button {
+	position:absolute;
+	top:0;
+	right:0;
+
+	padding:1em;
+	/* background-color:#F9EACC; */
+
+
+	/* JOUW CODE HIER - stap 3 */
+	order:-1;
+}
+
+/***************/
+/* SLUIT BUTTON */
+/***************/
+  nav button {
+	position:absolute;
+	top:0;
+	right:0;
+
+	padding:1em;
+	
+	
+	justify-self:start;
+}
+
+/***************/
+/*  BANNER */
+/***************/
+#backgroundart {
+	width: 100%;
+	height: 100%;
+	/* background-position: 50%; */
+	background-size:cover;
+}
 
 

@@ -169,10 +169,11 @@ Hoe kan ik de afbeelding groottes aanpassen zonder de hele foto gelijk te vervor
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+Geholpen met...
+  - het ordenen van de home background image. 
+
+
+  
 
 </details>
 
@@ -202,18 +203,40 @@ Hoe kan ik de afbeelding groottes aanpassen zonder de hele foto gelijk te vervor
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Afgelopen week ik heb ik ivm mentale klachten als gevolg van persoonlijke omstandigheden wat minder voortgang geboekt vergeleijken met voorgaande weken. Ik heb bij de decaan aan de bel getrokken en heb een afspraak met Casper Riekwel op 31 October om 9:30.
+  Ik zal zeker mijn best doen om komend recess wat grotere sprongen te maken met mijn voortgang.
+
+  Wel heb ik in code pen een hamburger menu geanimeerd en ik wil deze code graag in mijn bestand verwerken samen wat animeer technieken die we vorige week hebben behandeld: https://codepen.io/CaynaCanCode/pen/mdaQJZY
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+| student 1: Cayna |     
+  - Hoe kan ik mijn code pen Hamburger menu code in mijn bestand verwerken.https://codepen.io/CaynaCanCode/pen/mdaQJZY
+  - Hoe zorg ik ervoor dat de animatie gecentreerd in he scherm verschijnt.
+
+  Main/Sectie 3
+  - mag je meerdere h2 hebben in 1 section? (relevant voor section 3)
+  - Hoe kan ik er voor zorgen dat een e-reader weet welke H2 hoort bij welke p binnen dezelfde sectie als er meerdere h2 en p’s zijn? (relevant voor section 3)
+  - Heb ik bij sectie 3 correct de SPAN  en IMG gebruikt in de h2’s?
+  - kan ik voor sectie 3 de volgende methode toepassen voor de iconen https://fontawesome.com/docs/web/dig-deeper/accessibility
+  Zijn de iconen decoratief of een semantisch element?
+
+  Main/sectie 4
+  - kan ik <b> en <br> gebruiken voor readability en hoe accessable is het?
+  - heb ik sectie 4 goed opgesteld? Img, h2, h3 , br, b, etc.
+
+| student 2:  |        
+| student 3:  |
+| student 4:  |
+
+Main/sectie 4
+- kan ik <b> en <br> gebruiken voor readability en hoe accessable is het?
+- heb ik sectie 4 goed opgesteld? Img, h2, h3 , br, b, etc.
 
 
-  ### Verslag van meeting
+### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - punt 1
