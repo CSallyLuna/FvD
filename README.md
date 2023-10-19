@@ -208,6 +208,9 @@ Geholpen met...
 
   Wel heb ik in code pen een hamburger menu geanimeerd en ik wil deze code graag in mijn bestand verwerken samen wat animeer technieken die we vorige week hebben behandeld: https://codepen.io/CaynaCanCode/pen/mdaQJZY
 
+  Er was een verandering in de UI design van de originele website sinds vorige week
+  <img src="readme-images/NieuweUI-19:10:23-studio-lofigirl.com_(iPhone 12 Pro).png" width="375px" >
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
