@@ -227,7 +227,7 @@ Geholpen met...
   Zijn de iconen decoratief of een semantisch element?
 
   Main/sectie 4
-  - kan ik <b> en <br> gebruiken voor readability en hoe accessable is het?
+  - kan ik <b> en <br> gebruiken voor readability en hoe accessable is het? Nee is nooit goed
   - heb ik sectie 4 goed opgesteld? Img, h2, h3 , br, b, etc.
 
 | student 2:  |        
@@ -242,10 +242,8 @@ Main/sectie 4
 ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Geholpen met [aria-current="page"] styling, je moest display: block; toevoegen (Let wel op dat je kan uitleggen waarom je dit nodig had)
+  - Section 1: zet img in list. Je hebt een meta queery nodig
 
 </details>
 

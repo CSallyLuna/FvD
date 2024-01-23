@@ -6,51 +6,73 @@
 }
 
 
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-
+	--color-text-dark:#111;
+	--color-text-light:#ffffff;
+	--color-background:#FAEACC;
+	--secondary-color:#2A1A19;
+	--third-color: #F09C5E;
+	--my-radius:3.75em;
+	
 }
-
-body {
-	margin:0;
-}
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
 /****************/
 /*  jouw code   */
 
-/* TEMPORARY SIZE FOR ALL IMAGES WHILE CODING */
-/* img {
-	height: 2em;
-} */
+body {
+	font-family: 'kanit', sans-serif;
+	margin:0;
+	background-color:var(--color-background);
+}
+
+header, main, footer {
+    font-family: 'Kanit', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 400;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+
+
 
 /******************************************************/
 /* styling voor de small-screen versie van de website */
 /******************************************************/
 
-/****************/
-/* Header */
-/****************/
 
+
+/****************/
+/* HEADER */
+/****************/
 
 body > header {
 	position: fixed;
+	top:0;
+	left:0;
+
+	z-index: 100;
 	height:3rem;
     width: 100%;
-	background-color:#2A1A19;
+	
+	padding-left: 2.125em;
+	padding-right: 2.125em;
+
+	background-color:var(--color-background);
 
 	/* min-height:4em;
 	padding:0 1em;
@@ -61,30 +83,117 @@ body > header {
 	
 	/* JOUW CODE HIER - stap 3 */
 	display: flex;
-	justify-content:space-between;
+	/* justify-content:space-between; */
 	align-items:center;
 }
 
+body > header > nav, body > header > a:last-of-type {
+	padding: 10em;
+}
 
-main > header{
-	background: url(../images/Home_Background_Art.jpg);
-	background-position: center;
+/****************/
+/* Contact us */
+/****************/
+body > header > a:last-of-type {
+    display: block;
+    padding: 0.75em 2.5em;
+    font: 0.875em, 'Kanit', sans-serif;
+	color: var(--secondary-color);
+	background-color: var(--third-color);
+	border-radius: 2em;
+}
+
+@media (max-width: 32em) {
+    body > header > a:last-of-type {
+        display:none;
+    }
+}
+
+@media (min-width: 32em) {
+    header nav li:last-child {
+      opacity: 0;
+        pointer-events: none; /* Disable pointer events to make it unclickable */
+        max-height: 0; /* Optionally, set max-height to 0 to fully collapse the element */
+        overflow: hidden; /* Hide any overflowing content */
+    }
+}
+
+nav ul li {
+    transition: opacity 0.02s ease; /* Add a transition property for opacity */
+}
+
+
+/***************************/
+/* PROBLEEM 00:11: 
+- Hoe krijg ik het hamburger uitgeklapt in de  header 
+bar waneer de width max groot is?
+*/
+/***************************/
+
+
+
+/***************************/
+/* BACKGROUND IMAGE COVER */
+/***************************/
+
+main > header {
+	/* background-image: url(../images/Home_Background_Art.jpg);
+	background-position: center; */
+	position: relative;
+	overflow: hidden;
 
 	height: 100vh;
 
-	Display:flex;
+	display:flex;
 	justify-content:center;
 	align-items:center;
 }
+/* Ik heb chat gpt gevraagd om mij te helpen met de BG Image, prompt: How do I put a background image in the
+main > header > img */
+.background-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/* Ik heb chat gpt gevraagd om mij te helpen met de BG Image, prompt: How do I put a background image in the
+main > header > img */
+.background-image-container img {
+    width: auto; /* behoudt de aspect ratio */
+    height: 100%;
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    object-fit: cover;
+}
+
+/***************/
+/*  BANNER: DOESN WORK */
+/***************/
+/* #backgroundart {
+	width: 100%;
+	height: 100%;
+	background-position: 50%;
+	background-size:cover;
+} */
+
+
+
 
 /********************************/
-/*  LOGO */
+/*  LOGO in bar */
 /********************************/
+
+header a:first-of-type {
+	order:-1;
+	margin-right:auto;
+}
 
 header a img {
-	position:absolute;
-	top:0;
-	left:0;
+	/* position:absolute;   */
+	/* top:0.5em; */
+	/* left:0.5em; */
 
 	width: 2em;
 	
@@ -102,15 +211,18 @@ h1 {
 	left:0;
 	top:0;
 	bottom:0;
+	margin:0;
 	
 	Display:flex;
 	justify-content:center;
 	align-items:center;
+
+	background-color: ;
 }
 
-h1 img {
-	width:60%;
 
+h1 img {
+	width:70%;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -128,7 +240,14 @@ h1 img {
   
   /* attribuut selector */
   [aria-current="page"] {
-	color:red;
+	color:var(--color-text-light);
+	background-color: var(--secondary-color);
+	
+	/* geeft niet gewenste resultaat */
+	left:0;
+	right:0;
+	/* hoe zorg ik ervoor dat deze een padding krijgt? */
+
   }
 
   
@@ -138,81 +257,267 @@ h1 img {
 
 nav {
 	/* JOUW CODE HIER - stap 1 */
-	position:fixed;
-	top:0;
+	position:absolute;
+	top:100%;
 	right:0;
 	left:0;
 
-	padding:1em;
+	background-color: var(--color-background);
 
 	display:grid;
 	align-content:start;
 	gap:1em;
-	
-	background-color: #F9EACC;
+
+	text-align:center;
 
 	/* JOUW CODE HIER - stap 2 */
-	translate:0% -100%;
+	/* translate:0% -100%; */
 
 	/* JOUW CODE HIER - stap 4 */
 	transition:.1s;
+
+	transform-origin: 50% 0%;
+	scale:1 0;
+}
+
+
+/* als menu open is */
+nav.open {
+	/* JOUW CODE HIER - stap 4 */
+	/* translate:0 0; */
+
+
+	transition:.5s;
+
+	/* top:3em; */
+	
+	padding:0;
+	
+	scale:1 1;
 }
 
 header nav a {
-	text-transform: uppercase;
+	/* Styled text in hamburger menu */
+	text-transform:capitalize;
+	text-decoration: none;
+	color: #2A1A19;
+	/* Helpt ... */
+	display: block;
+	/* ... */
+	padding: 1em;
+
   }
 
 header button {
 	order:-1;
 }
 
-/* als menu open is */
-nav.open {
-	/* JOUW CODE HIER - stap 4 */
-	translate:0 0;
 
-	transition:.5s;
+
+ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+
 }
 
-/***************/
-/* MENU BUTTON */
-/***************/
+li {
+	margin: 0;
+	width: 100%;
+
+	opacity: 0; /* IS AFFECTING ALL LIST ITEMS NOT TO BE SEEN */
+
+	transition: .2s .3s;
+}
+
+nav.open li {
+	/* padding:10px 20px;; */
+	opacity: 1;
+	transition: .2s .5s;
+}
+
+/**********************/
+/* MENU OPEN BUTTON */
+/**********************/
 
 header > button {
-	position:absolute;
-	top:0;
-	right:0;
+	position:relative;
+	
+	background-color: rgba(255, 0, 0, 0); ;
+	border-style: none;
 
-	padding:1em;
+	/* padding:1em; */
 	/* background-color:#F9EACC; */
 
 
 	/* JOUW CODE HIER - stap 3 */
-	order:-1;
+	/* order:-1; */
+
+	
+	width:2.5em;
+	aspect-ratio: 1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+header > button div:first-of-type, 
+header > button div:nth-child(2), 
+header > button div:nth-child(3) {
+	position: absolute;
+	width: 1.5em; 
+    height: 0.21em;
+	border-radius: 1em;
+    background-color: #333;
+	transition:.3s;
+   
+}
+
+header > button:hover{
+    color: var(--third-color);
+}
+
+/********************/
+/* MENU CLOSE BUTTON */
+/********************/
+
+
+header > button div:first-of-type {
+	transform: translate(0px, -6px);
+}
+
+
+header > button div:nth-child(3) {
+	transform: translate(0px, 6px);
+
 }
 
 /***************/
 /* SLUIT BUTTON */
 /***************/
-  nav button {
-	position:absolute;
-	top:0;
-	right:0;
 
-	padding:1em;
+header > button.open div:first-of-type {
+	transform: rotate(-45deg);
+}
+
+header > button.open div:nth-child(2) {
+	opacity:0;
+}
+
+header > button.open div:nth-child(3) {
+	transform: rotate(45deg);
+}
+
+/********************/
+/*  NAV Hover States */
+/*******************/
+/* Hamburger icon and X */
+header > button:hover div {
+	background-color: #F09C5E;
+	transition: 0.2s;
+}
+
+/* List items */
+nav a:hover {
+	color: var(--color-text-light);
+	background-color: var(--secondary-color);
+}
+
+
+/***************************************************************/
+
+/***************/
+/*  SECTIONS */
+/***************/
+
+section {
+	margin-top:2.8em;
+	margin-bottom:2.8em;
+}
+
+section {
+	margin-left:1.21875em;
+	margin-right:1.21875em;
+}
+
+section a {
+	padding:0.75em 5em; 
+	border-radius: var(--my-radius);
+	text-align: center;
+	color:var(--secondary-color);
+	background-color:var(--third-color);
+	color:#2A1A19s
+}
+
+
+
+@media (max-width: 31.25em) {
+	section a {
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+section:first-of-type a {
 	
+	/* padding:0.75em 5em; 
+	border-radius: var(--my-radius);
+	text-align: center;
+	background-color: #F09C5E;
+	color:#2A1A19s 
+	*/
+} 
+
+
+/***************/
+/*  SECTION 1: GET TO KNOW US */
+/***************/
+
+
+
+section:first-of-type li {
+	opacity:100; /* img verscheen anders niet */
+	display: flex;
+    flex-direction: column;
+	margin-top: 2em;
+
+}
+
+
+section img {
+	border-radius: var(--my-radius);
+}
+
+
+main section h2 {
+	font-family: 'Kanit',sans-serif;
+	font-size:  2.1875em;
+	font-weight: 200;
+	margin:0;
 	
-	justify-self:start;
+}
+
+main section h3 {
+	font-family: 'Kanit',sans-serif;
+	font-size: 1.25em;
+	font-weight: 400;
+	margin:0;
+	
 }
 
 /***************/
-/*  BANNER */
+/*  FOOTER */
 /***************/
-#backgroundart {
-	width: 100%;
-	height: 100%;
-	/* background-position: 50%; */
-	background-size:cover;
+footer li{
+	color:black;
+	opacity:100;
 }
 
-
+footer {
+	margin-left:1.21875em;
+	margin-right:1.21875em;
+}
