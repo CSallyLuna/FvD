@@ -1,143 +1,145 @@
-<!doctype html>
-<html lang="nl">
-	
-<head>
-	<meta charset="UTF-8">
-	<meta name="author" content="Caynalin Bedoya">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Home - Lofi Studio</title>
-	
-	<link href="styles/style.css" rel="stylesheet">
-	<!-- LOGO IN TAB ICON -->
-	<link rel="icon" type="image/svg+xml" href="images/Lofi_Girl-1024x1024.png">
-	<!-- GOOGLE FONT: KANIT -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap">
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Caynalin Bedoya">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Lofi Studio</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <!-- LOGO IN TAB ICON -->
+    <link rel="icon" type="image/svg+xml" href="images/Lofi_Girl-1024x1024.png">
+    <!-- GOOGLE FONT: KANIT -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap">
 </head>
 
 <body>
-	
-<header>
-	<!-- het logo -->
-	<a href="Index.html"> 
-		<img src="images/Lofi_Girl-1024x1024.png"> 
-	</a>
 
-	
-	<!-- de open button -->
-	<!-- de button is niet relevant voor screenreaders -->
-	<!-- met aria-hidden="true" 'verstop' je de button voor de screenreader -->
-	<button aria-hidden="true" >
-		<!-- <img src="images/hamburger-menu-icon.svg" alt="Open menu button"/> -->
-		<div></div>
-        <div></div>
-        <div></div>
-	</button>
+    <header>
+        <!-- Logo -->
+        <a href="Index.html">
+            <img src="images/lofi studio logo donker.png" alt="Lofi studio home page">
+        </a>
 
-	<!--  het menu -->
+        <!-- Open button -->
+        <!-- The button is not relevant for screen readers -->
+        <!-- Using aria-hidden="true" hides the button from the screen reader -->
+        <button aria-hidden="true">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
 
-	<nav>
-	<!-- de sluit button -->
-    <!-- de button is ook niet relevant voor screenreaders -->
-	<!-- <button aria-hidden="true" >
-		<img src="images/Close-hamburger-menu-icon.svg" alt="Close menu button" />
-	</button> -->
-		<ul>
-			<li>
-				<a href="index.html"  aria-current="page">Home</a>
-			</li>
-			<li>
-				<a href="Our-services.html">Our service</a>
-			</li>
-			<li>
-				<a href="Our-projects.html">Our projects</a>
-			</li>
-			<li>
-				<a href="Jobs.html">Jobs</a>
-			</li>
-			<li>
-				<a href="Contact.html" >Contact us</a>
-			</li>
-		</ul>
-	</nav>
-	<a href="Contact.html" >Contact us</a>
-</header>
+        <!-- Menu -->
+        <nav>
+            <!-- Close button -->
+            <!-- The button is also not relevant for screen readers -->
+            <!--
+            <button aria-hidden="true">
+                <img src="images/Close-hamburger-menu-icon.svg" alt="Close menu button" />
+            </button>
+            -->
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="Our-services.html">Our services</a></li>
+                <li><a href="Our-projects.html">Our projects</a></li>
+                <li><a href="Jobs.html">Jobs</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <a href="Contact.html">Contact us</a>
+    </header>
 
-<main>
-	<header>
-		<!-- Ik heb chat gpt gevraagd om mij te helpen met de BG Image, prompt: How do I put a background image in the
-main > header > img  -->
-		<div class="background-image-container">
-            <img src="images/Home_Background_Art.jpg" alt="Background Image showing girl in raincoat spalishing in puddles during autumn">
-        </div>
-		<!-- De titel: Lofi Studio, text logo -->
-		<h1><span class="visually-hidden"> Welcome to the home page of Lofi Studio </span><img src="images/Lofi_Studio_Logo-1024x577.png" alt="Go to homepage"></h1>
-		
-	</header>
-	<section>
-		<!-- SECTION 1: GET TO KNOW US -->
-		<h2>Get to know us</h2>
-		<h3>A team of experienced professionals</h3>
-		<p>Founded in 2022, Lofi Studio started with a dedicated focus on creating album and EP covers for Lofi Records. Our journey soon took a creative turn, leading us to design animations for the notable Lofi Girl compilation. As our team grew, so did our vision, prompting us to expand the studio.</p>
-		<p>Today, Lofi Studio is a vibrant mix of illustrators, animators, and designers from around the world. We all share a deep passion for art and storytelling. Beyond our collaborations with big names like Disney and Psyonix, we pride ourselves on our versatility across various styles. Under the watchful eye of our art director, we ensure that every client collaborates with a team that’s dedicated and trustworthy.</p>
-		<a href="">Discover our services</a>
-		<ul>
-			<li>
-				<img src="images/lofigirl_frog_sticker_phone.png">
-			</li>
-			<li>
-				<img src="images/purple_witch.jpeg">
-			</li>
-			<li>
-				<img src="images/yellow_girl_glasses.png">
-			</li>
-		</ul>
-	</section>
-	<section>
-		<!-- SECTION 2: THE TRUST US -->
-		<h2>They trust us</h2>
-		<h3>Big brands who chose Lofi Studio</h3>
-	</section>
-	
-</main>
+    <main>
+        <header style="background-image: url('images/Home_Background_Art.jpg');">
+            <!-- Title: Lofi Studio, text logo -->
+            <h1><span class="visually-hidden">Welcome to the home page of Lofi Studio</span><img src="images/Lofi_Studio_Logo-1024x577.png" alt="Go to homepage"></h1>
+        </header>
 
-<footer>
-	<h2>Lofi Studio</h2>
-	<ul>
-		<h3>Quick Links</h3>
-		<li>
-			<a href="Jobs.html">Jobs</a>
-		</li>
-		<li>
-			<a href="Our-projects.html">Our projects</a>
-		</li>
-		<li>
-			<a href="Our-services.html">Our services</a>
-		</li>
-		<li>
-			<a href="Contact.html">Contact</a>
-		</li>
-		<li>
-			<a href="https://lofigirl.com/">Lofi Girl Website</a>
-		</li>
-	</ul>
-	<ul>
-		<h3>Follow us</h3>
-		<li>
-			<a href="https://www.instagram.com/lofistudio/">Instagram</a>
-		</li>
-		<li>
-			<a href="https://twitter.com/Lofi_Studio_">Twitter</a>
-		</li>
-		<li>
-			<a href="https://discord.com/invite/HMBTJfF7gp">Discord</a>
-		</li>
-	</ul>
-</footer>
+        <!-- SECTION 1: GET TO KNOW US -->
+        <section>
+            <h2>Get to know us</h2>
+            <h3>A team of experienced professionals</h3>
+            <p>Founded in 2022, Lofi Studio started with a dedicated focus on creating album and EP covers for Lofi Records. Our journey soon took a creative turn, leading us to design animations for the notable Lofi Girl compilation. As our team grew, so did our vision, prompting us to expand the studio.</p>
+            <p>Today, Lofi Studio is a vibrant mix of illustrators, animators, and designers from around the world. We all share a deep passion for art and storytelling. Beyond our collaborations with big names like Disney and Psyonix, we pride ourselves on our versatility across various styles. Under the watchful eye of our art director, we ensure that every client collaborates with a team that’s dedicated and trustworthy.</p>
+            <a href="Our-services.html">Discover our services</a>
+            <ul>
+                <li><img src="images/lofigirl_frog_sticker_phone.png" alt="Drawing of lofi girl holding her phone with a frog sticker on the back."></li>
+                <li><img src="images/purple_witch.jpeg" alt="Drawing of a witch with purple hair together with her dog."></li>
+                <li><img src="images/yellow_girl_glasses.png" alt="Cartoonish portrait of a blonde girl with glasses and blue eyes, she is wearing a yellow hoodie."></li>
+            </ul>
+        </section>
 
-<script defer src="scripts/script.js"></script>
+        <!-- SECTION 2: THEY TRUST US -->
+        <section>
+            <h2>They trust us</h2>
+            <h3>Big brands who chose Lofi Studio</h3>
+            <ul>
+                <li><img src="images/LEGO.svg" alt="lego logo"></li>
+                <li><img src="images/bethesda.svg" alt="bethesda game studios logo"></li>
+                <li><img src="images/RocketL.svg" alt="Rocket League Logo"></li>
+                <li><img src="images/WATTPAD.svg" alt="Wattpad Logo"></li>
+            </ul>
+        </section>
+
+        <!-- SECTION 3: OUR SERVICES -->
+        <section>
+            <h2>Our services</h2>
+            <article>
+                <h3>Visual assets</h3>
+                <p>Our team is equipped to handle a variety of design needs, from playful emojis for streaming platforms to professional logos for apps. Let us help bring your creative vision to life with our high-quality design services</p>
+                <img src="images/lofi girl emoticons.png" alt="Lofi girl emoticons">
+            </article>
+            <article>
+                <h3>High quality animations</h3>
+                <p>Our animation team is dedicated to bringing your visuals to life through the use of various animation techniques. Let us elevate your project with our expert skills and attention to detail</p>
+                <img src="images/Checking on phone.gif" alt="Animation of lofi girl checking on het phone while sitting on the floor with a blanket">
+            </article>
+            <article>
+                <h3>High quality illustrations</h3>
+                <p>We specialize in creating impactful illustrations that will take your project to the next level. From basic social media graphics to elaborate hand-painted pieces, we have the skills and expertise to bring your vision to life</p>
+                <img src="images/soothing breeze.jpeg" alt="Relaxing image of lofi girl meditating on her porch">
+            </article>
+            <article>
+                <h3>Social Media</h3>
+                <p>Whether you’re looking for design assistance or content creation, we have the expertise and skills to help you effectively leverage the power of social media to grow and succeed.</p>
+                <img src="images/lofi girl picking records.png" alt="Drawing of lofi girl picking records in a store">
+            </article>
+            <a href="Our-services.html">See all services</a>
+        </section>
+        <section>
+            <h2>See all jobs</h2>
+            <p>You are a talented artist and want to join our team? Check out our vacancies and apply through our form!</p>
+            <a href="Jobs.html">See all jobs </a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="Index.html">
+            <img src="images/Lofi_Studio_Logo-1024x577.png" alt="Lofi studio home page">
+        </a>
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="Jobs.html">Jobs</a></li>
+            <li><a href="Our-projects.html">Our projects</a></li>
+            <li><a href="Our-services.html">Our services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="https://lofigirl.com/">Lofi Girl Website</a></li>
+        </ul>
+        <h4>Follow us</h4>
+        <ul>
+            <li><a href="https://www.instagram.com/lofistudio/">Instagram</a></li>
+            <li><a href="https://twitter.com/Lofi_Studio_">Twitter</a></li>
+            <li><a href="https://discord.com/invite/HMBTJfF7gp">Discord</a></li>
+        </ul>
+        <a href="Our-projects.html">See all projects</a>
+    </footer>
+
+    <script defer src="scripts/script.js"></script>
 
 </body>
-	
+
 </html>
+
+
