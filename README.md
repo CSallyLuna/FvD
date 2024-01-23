@@ -249,34 +249,39 @@ Main/sectie 4
 
 
 
-
-
 ## Eindgesprek (week 5)
 
 <details>
   <summary>uitwerken voor eindgesprek</summary>
 
-  ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
-
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
+- Ik heb custom properties leren gebruiken.
+- ik heb media queries leren gebruiken! Al ging ik for een wat meer surface level website. Ik heb het toch wel hier en daar responsive kunnen maken met de media queries.
+- Een image banner plaatens, centreren en responsive maken
+- Ik heb een hamburgeren leren maken, ik vind het nog steeds moeijlijk te begrijpen, maar door stappen te volgen lukt het prima en ik leer resourcefull naar informatie te zoeken en het effectief toe te passen.
+- Ik heb heb tools als AI beter leren gebruiken om zowel te spelende wijze te leren als efficient moderne tools gebruiken. Door met de ai te comuniceren alsof het mijn leeraar is, heb ik veel beter de stof tot me kunnen nemnen. Ik vroeg dingen als "can you explain to me step by step" en vroeg waarom een element nodig was.
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+Dingen waar ik tegen aan liep:
+- Het plaatsen van een achtergrond banner, ik heb veel moeten zoeken, en ik kwam op gegevn uit bij een methode die divs gebruikte. Eerst dacht ik dat het niet anders kon. Ik heb daarna toch een beetje verder gezocht en ik kwam en leerde dat je niet perse een image container nodig heb maar het ook direct in de <header style="background-image: url('images/Home_Background_Art.jpg');"> kan zetten.
+
+- Ik liep ook vast met mijn drop down menu vaak. Ik merkte dat ik soms conflicterende codes had, maar door te blijven proberen en goed te lezen via de inspecteer functie van Chrome, kwam ik er steeds sneller achter als dit gebeurde. 
+- Ik ging voorral voor een surface level mobiel website, maar ik wilde ook een paar responsive features toe te voegen. Ik heb dit voorraal in het menu gedaan. Door hier aan te knutselen heb ik veel geleerd over media queries! Het koste me eerst veel moeite om uit te vogelen hoe ik "contact us" op verschillende plekken in de bar zichtbaar kon maken bij varierende scherm breedtes. Ik kan nu met vertrouwen zeggen dat ik hier een beetje handigheid mee heb ontwikkeld. Ik wilde ook het menu verder uitwerken en kompleet in dekstop width laten uitklappen, maar daar had ik wel wat meer tijd voor nodig gehad. Het kost mij meestal wel tijd maar uit eindelijk kom ik er
+- Het lastigste vond ik uiteindelijk wel de GRIDS en flexbox. Hier moest ik het vaakst voor spieken. Maar zlefs als ik het volgend de stappen deed die online staan, lukte het me niet om de content in de rechter kolommen te krijgen en ik weet nogsteeds niet wat ik daar fout deed. Ik ga me er wel verder in verdiepen want nu wil ik het weten haha.
+  <img src="readme-images/lofi websit 1.png" width="375px" alt="bummer">
+  <img src="readme-images/lofi websit 2.png" width="375px" alt="bummer">
+   <img src="readme-images/lofi websit 3.png" width="375px" alt="bummer">
+
 </details>
 
 
 
 
 
-## Bronnenlijst
+###### Bronnenlijst ######
 
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
@@ -285,8 +290,435 @@ Main/sectie 4
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+ ### Please help me center <a href="Our-services.html">See all services</a> in the middle of the screen in a responsive way.
+
+- **Chat GPT’S answer**
+    
+    You can use a combination of Flexbox and media queries to center the "See all services" link in a responsive way. Add the following CSS rule to your existing styles:
+    
+    ```css
+    /* Center the "See all services" link */
+    section:nth-of-type(3) a[href="Our-services.html"] {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding: 1em; /* Add some padding for better visibility and touch target */
+        border-radius: var(--my-radius);
+        background-color: var(--third-color);
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    /* Adjust padding and styles as needed */
+    @media (max-width: 768px) {
+        section:nth-of-type(3) a[href="Our-services.html"] {
+            padding: 0.75em; /* Adjust padding for smaller screens */
+        }
+    }
+    
+    ```
+    
+    This CSS code targets the "See all services" link in the third section, applying styles to center it on the screen. The `@media` query adjusts the padding for smaller screens to ensure a good user experience. Feel free to adjust the padding and styles based on your design preferences.
+    
+
+### Please help me center the <a href="Our-projects.html">See all projects</a>
+
+- **Chat GPT’S answer**
+    
+    To center the "See all projects" link in the footer, you can apply a CSS style. Add the following CSS rule to your stylesheet:
+    
+    ```css
+    footer a[href="Our-projects.html"] {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    ```
+    
+    This CSS rule targets the specific link with the href attribute set to "Our-projects.html" within the footer. It sets the display property to "block" to make it a block-level element, and then it uses `margin: 0 auto;` to center it horizontally. Finally, `text-align: center;` ensures the text inside the link is centered.
+    
+    Remember to adjust the href attribute in the CSS selector if the link changes.
+    
+
+- **SAVE THIS CSS FOR SECTION 1 AND 1 INCASE ALL FAILS**
+    
+    ```css
+    /***************/
+    /*  SECTION 1: GET TO KNOW US */
+    /***************/
+    
+    section:first-of-type li {
+    	display: flex;
+        flex-direction: column;
+    	margin-top: 2em;
+    }
+    
+    /***************/
+    /*  SECTION 2: THEY TRUST US */
+    /***************/
+    
+    section:nth-of-type(2) {
+    	display: grid;
+    	grid-template-columns: 1fr;
+    	gap: 1em;
+    	background-color: var(--third-color);
+    	text-align: center;
+    	padding: 2em;
+      }
+      
+      section:nth-of-type(2) h3 {
+    	font-size: 1em;
+      }
+      
+      section:nth-of-type(2) ul {
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	list-style: none;
+    	padding: 0;
+      }
+      
+      section:nth-of-type(2) li {
+    	flex: 1 1 calc(50% - 1em);
+    	max-width: calc(50% - 1em);
+    	text-align: center;
+      }
+      
+      section:nth-of-type(2) img {
+    	width: 100%;
+    	padding: 1.5625em;
+    	margin-left: 0.625em;
+    	border-radius: 0;
+      }
+      
+      @media (min-width: 32em) {
+    	section:nth-of-type(2) {
+    	  display: grid;
+    	  grid-template-columns: 1fr 1fr;
+    	  text-align: left;
+    	}
+      
+    	section:nth-of-type(2) h2,
+    	section:nth-of-type(2) h3 {
+    	  grid-column: 1 / -1; /* Span both columns */
+    	  text-align: left; /* Align text to the left within the grid cell */
+    	}
+      
+    	section:nth-of-type(2) ul {
+    	  justify-content: flex-start; /* Align the list to the start (top) of its container */
+    	}
+      }
+    ```
+    
+
+### Can you explain to me step for step please how to make a two column grid within a section?
+
+- **Chat GPT’S answer**
+    
+    Certainly! Here's a step-by-step explanation of how to create a two-column grid within a section:
+    
+    ### Step 1: Identify the Section
+    
+    First, identify the `section` in your HTML where you want to create the two-column grid.
+    
+    ```html
+    <section>
+      <!-- Your content goes here -->
+    </section>
+    
+    ```
+    
+    ### Step 2: Apply CSS for Grid Layout
+    
+    Apply CSS to the identified `section` to create a two-column grid.
+    
+    ```css
+    section {
+      display: grid;            /* Set the display property to grid */
+      grid-template-columns: 1fr 1fr;  /* Define two columns with equal width */
+      gap: 20px;                /* Add a gap between columns (adjust as needed) */
+    }
+    
+    ```
+    
+    In this example, `1fr` stands for 1 fraction unit, and it will distribute the available space equally between the two columns.
+    
+    ### Step 3: Adjust Content Styles
+    
+    You might want to adjust the styles for the content within the section. For example:
+    
+    ```css
+    section h2, section h3, section p {
+      /* Styles for headings and paragraphs in the first column */
+    }
+    
+    section img {
+      /* Styles for images in the second column */
+    }
+    
+    ```
+    
+    ### Step 4: Responsive Design (Optional)
+    
+    Consider adding a media query for responsive design, especially if you want to change the layout on smaller screens.
+    
+    ```css
+    @media (max-width: 767px) {
+      section {
+        grid-template-columns: 1fr;  /* Change to a single column on smaller screens */
+      }
+    }
+    
+    ```
+    
+    This is a basic guide to creating a two-column grid within a section. Adjust the styles and sizes according to your design preferences. If you have specific content or layout in your `section`, you may need to adapt the CSS accordingly.
+    
+
+### How do I organize the section:nth-of-type(2) in a responsive flexbox?
+
+- **Chat GPT’S answer**
+    
+    To organize `section:nth-of-type(2)` as a responsive flexbox, you can make a few adjustments to your CSS. It looks like you want to switch between grid and flexbox based on the screen width.
+    
+    Here's the updated CSS:
+    
+    ```css
+    /***************/
+    /*  SECTION 2: THEY TRUST US */
+    /***************/
+    
+    section:nth-of-type(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2em;
+      gap: 1em;
+      background-color: var(--third-color);
+    }
+    
+    section:nth-of-type(2) h3 {
+      font-size: 1em;
+    }
+    
+    section:nth-of-type(2) ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+      list-style: none;
+      padding: 0;
+    }
+    
+    section:nth-of-type(2) li {
+      flex: 1 1 calc(50% - 1em);
+      max-width: calc(50% - 1em);
+      text-align: center;
+    }
+    
+    section:nth-of-type(2) img {
+      width: 100%;
+      border-radius: var(--my-radius);
+      padding: 1.5625em;
+      margin-left: 0.625em;
+    }
+    
+    ```
+    
+    Here are the changes:
+    
+    1. I set `display: flex;` on `section:nth-of-type(2)` to make it a flex container.
+    2. I set `flex-direction: column;` to stack the child elements vertically on smaller screens.
+    3. I adjusted styles for `ul` and `li` to create a responsive layout. `flex-wrap: wrap;` allows items to wrap onto the next line on smaller screens, and `flex: 1 1 calc(50% - 1em);` and `max-width: calc(50% - 1em);` control the width of each item.
+    
+    This should make `section:nth-of-type(2)` responsive using a flexbox layout. Adjust the values as needed for your design.
+    
+
+### How do I make  <li><a href="Contact.html" >Contact us</a></li> appear with a smoot transition?
+
+- **Chat GPT’S answer**
+    
+    To make the appearance or disappearance of elements smoother, you can use CSS transitions. In your case, you want to make the `<li>` containing "Contact us" disappear when the screen width is above 34em. Here's how you can do it:
+    
+    CSS:
+    
+    ```css
+    nav ul li {
+        transition: opacity 0.3s ease; /* Add a transition property for opacity */
+    }
+    
+    /* Apply different styles for screens above 34em */
+    @media (min-width: 34em) {
+        nav ul li {
+            opacity: 0;
+            pointer-events: none; /* Disable pointer events to make it unclickable */
+            max-height: 0; /* Optionally, set max-height to 0 to fully collapse the element */
+            overflow: hidden; /* Hide any overflowing content */
+        }
+    }
+    
+    ```
+    
+    This CSS code adds a transition effect on the `opacity` property for smooth fading. The `pointer-events: none;` property ensures that the hidden element is not clickable, and `max-height: 0; overflow: hidden;` can be used if you want to collapse the element fully.
+    
+    This should make the "Contact us" item smoothly disappear when the screen width is above 34em. Adjust the transition duration (`0.3s` in this example) and other properties as needed for your design.
+    
+
+### How do I put a background image in the
+main > header > img
+
+- **Chat GPT’S answer**
+    
+    To add a background image to the `main > header > img` element, you can use the `background-image` property in your CSS. Since you're trying to set a background image on an `img` element, you should use an additional container (like a `div`) to act as the background container. Here's an example:
+    
+    HTML:
+    
+    ```html
+    <main>
+        <header>
+            <div class="background-image-container">
+                <img src="images/Home_Background_Art.jpg" alt="Background Image">
+            </div>
+            <!-- De titel: Lofi Studio, text logo -->
+            <h1><span class="visually-hidden"> Welcome to the home page of Lofi Studio </span><img src="images/Lofi_Studio_Logo-1024x577.png" alt="Go to homepage"></h1>
+        </header>
+        <!-- Rest of your content -->
+    </main>
+    
+    ```
+    
+    CSS:
+    
+    ```css
+    main > header {
+        position: relative; /* Make the container relative for absolute positioning */
+    }
+    
+    .background-image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Place the background container behind other content */
+    }
+    
+    .background-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure the image covers the container */
+    }
+    
+    ```
+    
+    This code creates a container (`background-image-container`) around the `img` element and sets the background image on this container. The `z-index: -1;` ensures that the background container is placed behind the other content. The `object-fit: cover;` property ensures that the background image covers the entire container.
+    
+    Adjust the paths and styles as needed based on your project's structure and design requirements.
+    
+
+Mijn code na:
+
+```css
+/* Ik heb chat gpt gevraagd om mij te helpen met de BG Image, prompt: How do I put a background image in the
+main > header > img */
+.background-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/* Ik heb chat gpt gevraagd om mij te helpen met de BG Image, prompt: How do I put a background image in the
+main > header > img */
+.background-image-container img {
+    width: auto; /* behoudt de aspect ratio */
+    height: 100%;
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    object-fit: cover;
+}
+```
+
+### What can I use instead of a div…
+
+what can I use instead of a div with <div class="background-image-container">
+<img src="images/Home_Background_Art.jpg" alt="Background Image showing girl in raincoat spalishing in puddles during autumn">
+</div> ?
+
+- **Chat GPT’S answer**
+    
+    HTML:
+    
+    ```html
+    htmlCopy code
+    <header style="background-image: url('images/Home_Background_Art.jpg');">
+        <!-- Your header content goes here -->
+    </header>
+    
+    ```
+    
+    This way, the background image is set directly on the **`<header>`** element, and you don't need an additional **`<div>`** just for the background image.
+    
+    CSS:
+    
+    ```css
+    cssCopy code
+    /* Remove the styles related to the background-image-container */
+    
+    main > header {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Adjust the styles for the background image directly on the header */
+    main > header {
+        background-image: url('images/Home_Background_Art.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    
+    /* You can keep or adjust other styles as needed */
+    h1 {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: ; /* Add your background color if needed */
+    }
+    
+    h1 img {
+        width: 70%;
+    }
+    
+    .background-image-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    .background-image-container img {
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    
+    ```
 
 </details>
