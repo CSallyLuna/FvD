@@ -384,20 +384,6 @@ main > header h2 {
   /*  SECTIONS */
   /***************/
 
-  /* Use disk to create bullet points */
-main section ul {
-    list-style-type: disc; 
-    margin-left: 1.5em; 
-}
-
-main section li p {
-    margin: 0; 
-    margin-bottom: 0.5em; 
-}
-
-
-
-  
   section {
 	  margin-top:2.8em;
 	  margin-bottom:2.8em;
@@ -410,13 +396,26 @@ main section li p {
 	  padding:2em;
   }
 
-  @media  (min-width: 25em) {
+  /* Use disk to create bullet points */
+  main section ul {
+    list-style-type: disc; 
+    margin-left: 1.5em; 
+}
+
+main section li p {
+    margin: 0; 
+    margin-bottom: 0.5em; 
+}
+
+  @media  (min-width: 32em) {
   section {
 	display: grid;            
 	grid-template-columns: 1fr 2fr; 
-	gap: 0.5em; 
+	gap: 0.5em;
+	place-items: center;
 }
-}
+
+  }
 
   
   main > a {
@@ -427,7 +426,7 @@ main section li p {
 	background-color:var(--third-color);
 }
   
-  @media (max-width: 31.25em) {
+  @media (max-width: 32em) {
 	  section a {
 		  width: 100%;
 		  display: block;
@@ -475,7 +474,7 @@ main > a[href="Apply-now.html"] {
 }
 @media (min-width: 32em) {
     main > a[href="Apply-now.html"] {
-        max-width: 15em%;
+        max-width: 15em;
 		margin-left:15%;
 		margin-right:15%;
     }

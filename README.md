@@ -274,6 +274,8 @@ Dingen waar ik tegen aan liep:
   <img src="readme-images/lofi websit 1.png" width="375px" alt="bummer">
   <img src="readme-images/lofi websit 2.png" width="375px" alt="bummer">
    <img src="readme-images/lofi websit 3.png" width="375px" alt="bummer">
+    <img src="readme-images/HTML VALIDATIE DETAIL PAGE.png" width="375px" alt="bummer">
+     <img src="readme-images/HTML VALIDATIE.png" width="375px" alt="bummer">
 
 </details>
 
