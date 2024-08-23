@@ -57,9 +57,6 @@ p {
 
 
 
-
-
-
 /****************/
 /* HEADER */
 /****************/
@@ -181,7 +178,9 @@ h1 {
 	
 	Display:flex;
 	justify-content:center;
-	align-items:center;	
+	align-items:center;
+
+	
 }
 
 
@@ -213,79 +212,7 @@ h1 img {
 	/* hoe zorg ik ervoor dat deze een padding krijgt? */
   }
 
-
-/********************************************************/
-/* ♪ ♪ ♪ ♪ ♪ ♪ ♪ ACHTERGROND MUZIEK ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
-/********************************************************/
-
-#music-controls {
-	position: fixed;
-	bottom:1em;
-	right:1em;
-	display: flex;
-	flex-direction: column; /* Stapel de items verticaal */
-    align-items: flex-end; /* Zorg dat de items aan de rechterkant van de container uitgelijnd worden */
-	gap:8em;
-	z-index: 1000; /* Zorg dat de knop boven andere elementen blijft */
-}
-
-/* styling voor de muziekknop */
-#toggle-music {
-    background-color: var(--third-color);
-    color: var(--color-text-light);
-    padding: 0.8em; /* Ruime binnenruimte voor klikbare gebieden */
-    border: none; 
-    border-radius: 1em; /* Ronde vorm */
-    cursor: pointer; /* Pointer-cursor om klikbaarheid aan te geven */
-	font-family: 'Kanit', sans-serif;
-    font-size: 1em; /* Leesbare lettergrootte */
-    text-align: center; /* Centreer de tekst */
-    box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
-    transition: background-color 0.3s ease; /* Zachte overgang voor kleurveranderingen */
-	order: 2;
-}
-
-/* Focus-styling voor toetsenbordnavigatie */
-#toggle-music:focus {
-    outline: 0.3em solid white; /* Wit kader voor duidelijke focusindicatie */
-    outline-offset: 0.2em; /* Ruimte tussen de knop en het focuskader */
-}
-
-/************************************************************************/
-/* ♪ ♪ ♪ ♪ ♪ ♪ ♪ ACHTERGROND MUZIEK - VOLUME SLIDER ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
-/***********************************************************************/
-
-#volume-slider {
-	width: 8em; /* Bepaal een vaste breedte voor de schuifregelaar */
-    height: 2em;
-    padding: 0.5em; /* Voeg binnenruimte toe voor een consistent uiterlijk met de knop */
-    border-radius: 1em; /* Ronde vorm, net als de knop */
-    background-color: #D04D01; /* Zelfde achtergrondkleur als de muziekknop */
-    -webkit-appearance: none; /* Verwijder standaard styling voor webkit-browsers */
-    appearance: none; /* Verwijder standaard styling */
-    cursor: pointer; /* Geef aan dat het element interactief is */
-    box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
-	order: 1;
-	transform: rotate(-90deg); /* Draai de slider 90 graden om deze verticaal te maken */
-	transform-origin: right bottom; /* Verander het draaipunt naar rechtsonder */
-}
-
-/* Styling voor de slider thumb (het schuifbare deel van de slider) */
-#volume-slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Verwijder standaard styling voor webkit-browsers */
-    appearance: none; /* Verwijder standaard styling */
-    width: 1.5em; /* Bepaal de breedte van de thumb */
-    height: 1.5em; /* Bepaal de hoogte van de thumb */
-    background-color: #fff; /* Maak de thumb licht van kleur voor contrast */
-    border-radius: 50%; /* Maak de thumb rond */
-    box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
-}
-
-#volume-slider:focus {
-	outline: 0.3em solid white; /* Wit kader voor duidelijke focusindicatie */
-    outline-offset: 0.2em; /* Ruimte tussen de knop en het focuskader */
-}
-
+  
 /********/
 /* MENU */
 /********/
@@ -395,8 +322,6 @@ header > button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	cursor: pointer; /* Pointer-cursor om klikbaarheid aan te geven */
-	
 
 
 }

@@ -109,10 +109,10 @@
   
   @media (min-width: 32em) {
 	  header nav li:last-child {
-		opacity: 0;
-		  pointer-events: none; /* Disable pointer events to make it unclickable */
-		  max-height: 0; /* Optionally, set max-height to 0 to fully collapse the element */
-		  overflow: hidden; /* Hide any overflowing content */
+		/* opacity: 0; */
+		 /* pointer-events: none; Disable pointer events to make it unclickable */
+		max-height: 0; /* Optionally, set max-height to 0 to fully collapse the element */
+		overflow: hidden; /* Hide any overflowing content */
 	  }
   }
   
