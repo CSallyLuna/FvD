@@ -80,6 +80,7 @@ body > header {
 	align-items: center;
   }
 
+  /*
   @media (min-width: 42em) {
 	body > header {
 		/* position: fixed;
@@ -93,10 +94,9 @@ body > header {
 		background-color: var(--color-background);
 		display: flex;
 		flex-wrap: row;
-		align-items: center; */
-	  }
-  }
-
+		align-items: center; 
+	}*/
+	
 
 
 /****************/
