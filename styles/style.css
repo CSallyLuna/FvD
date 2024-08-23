@@ -223,9 +223,9 @@ h1 img {
 	bottom:1em;
 	right:1em;
 	display: flex;
-	flex-direction: space-between; /* Stapel de items verticaal */
+	flex-direction: column; /* Stapel de items verticaal */
     align-items: flex-end; /* Zorg dat de items aan de rechterkant van de container uitgelijnd worden */
-	gap:1em;
+	gap:9em;
 	z-index: 1000; /* Zorg dat de knop boven andere elementen blijft */
 }
 
@@ -266,8 +266,8 @@ h1 img {
     cursor: pointer; /* Geef aan dat het element interactief is */
     box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
 	order: 1;
-	/*transform: rotate(-90deg); /* Draai de slider 90 graden om deze verticaal te maken */
-	/*transform-origin: right bottom; /* Verander het draaipunt naar rechtsonder */
+	transform: rotate(-90deg); /* Draai de slider 90 graden om deze verticaal te maken */
+	transform-origin: right bottom; /* Verander het draaipunt naar rechtsonder */
 }
 
 /* Styling voor de slider thumb (het schuifbare deel van de slider) */
