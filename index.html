@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Caynalin Bedoya">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - Lofi Studio</title>
+    <title>Lofi Studio - Home</title>
     <link href="styles/style.css" rel="stylesheet">
     <!-- LOGO IN TAB ICON -->
     <link rel="icon" type="image/svg+xml" href="images/Lofi_Girl-1024x1024.png">
@@ -13,28 +13,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap">
 </head>
 
-<body>
-
+<body aria-label="you find yourself now in the lofi studio webpage">
     <header>
         <!-- Logo -->
-        <a href="Index.html">
+        <a href="Index.html" aria-hidden="true">
             <img src="images/lofi studio logo donker.png" alt="Lofi studio home page">
         </a>
 
         <!-- Open button -->
         <!-- The button is not relevant for screen readers -->
-        <!-- Using aria-hidden="true" hides the button from the screen reader -->
-        <button aria-hidden="true">
+        <!-- Using aria-hidden="true" hides the button from the screen reader-->
+        <button  aria-hidden="true">
             <div></div>
             <div></div>
-            <div></div>
+            <div></div> 
         </button>
 
-        <!-- Menu -->
-        <nav>
+        <!-- Menu --> 
+        <nav aria-label="explore our webpage with the following links"> 
             <!-- Close button -->
             <!-- The button is also not relevant for screen readers -->
-            <!--
+            <!--s
             <button aria-hidden="true">
                 <img src="images/Close-hamburger-menu-icon.svg" alt="Close menu button" />
             </button>
@@ -50,11 +49,23 @@
         <a href="Contact.html">Contact us</a>
     </header>
 
-    <main>
+    <main  aria-label="start of home page content">
+        
         <header style="background-image: url('images/Home_Background_Art.jpg');">
             <!-- Title: Lofi Studio, text logo -->
-            <h1><span class="visually-hidden">Welcome to the home page of Lofi Studio</span><img src="images/Lofi_Studio_Logo-1024x577.png" alt="Go to homepage"></h1>
+            <h1><span class="visually-hidden">Welcome to the home page of Lofi Studio</span><img src="images/Lofi_Studio_Logo-1024x577.png" alt="lofi studio logo" aria-hidden="true"></h1>
         </header>
+
+        <!------- ACHTERGROND MUZIEK --------->
+        <audio id="background-music" src="audio/apples.mp3" loop></audio>
+
+        <div id="music-controls">
+            <!-- Knop om de muziek te beheren -->
+            <button id="toggle-music" aria-label="Play or Pause background music">Play Music</button>
+            <input type="range" id="volume-slider" name="volume" min="0" max="100" value="50" 
+            aria-label="Adjust volume of background music" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        </div>
+
 
         <!-- SECTION 1: GET TO KNOW US -->
         <section>
@@ -64,6 +75,8 @@
             <p>Today, Lofi Studio is a vibrant mix of illustrators, animators, and designers from around the world. We all share a deep passion for art and storytelling. Beyond our collaborations with big names like Disney and Psyonix, we pride ourselves on our versatility across various styles. Under the watchful eye of our art director, we ensure that every client collaborates with a team that’s dedicated and trustworthy.</p>
             <a href="Our-services.html">Discover our services</a>
             <ul>
+                <!-- Not sure if its ok to put span here, would be great to describe list content to user first tho!
+                <span class="visually-hidden">description of images by lofi studio</span>  -->
                 <li><img src="images/lofigirl_frog_sticker_phone.png" alt="Drawing of lofi girl holding her phone with a frog sticker on the back."></li>
                 <li><img src="images/purple_witch.jpeg" alt="Drawing of a witch with purple hair together with her dog."></li>
                 <li><img src="images/yellow_girl_glasses.png" alt="Cartoonish portrait of a blonde girl with glasses and blue eyes, she is wearing a yellow hoodie."></li>
@@ -72,11 +85,11 @@
 
         <!-- SECTION 2: THEY TRUST US -->
         <section>
-            <h2>They trust us</h2>
+            <h2 aria-label="Companies that trust us">They trust us</h2>
             <h3>Big brands who chose Lofi Studio</h3>
             <ul>
-                <li><img src="images/LEGO.svg" alt="lego logo"></li>
-                <li><img src="images/bethesda.svg" alt="bethesda game studios logo"></li>
+                <li><img src="images/LEGO.svg" alt="Lego Logo"></li>
+                <li><img src="images/bethesda.svg" alt="Bethesda Game Studios Logo"></li>
                 <li><img src="images/RocketL.svg" alt="Rocket League Logo"></li>
                 <li><img src="images/WATTPAD.svg" alt="Wattpad Logo"></li>
             </ul>
