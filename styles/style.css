@@ -501,16 +501,13 @@ nav a:hover {
     height: 2em; /* Bepaal de hoogte van de thumb */
     background-color: white; /* Maak de thumb licht van kleur voor contrast */
     border-radius: 50%; /* Maak de thumb rond */
-	z-index: 2000;
     box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
 	transition: width 0.2s ease, height 0.3s ease; /* Zachte overgang voor grootteverandering */
 }
 
 /*FOCUS STYLING*/
 #volume-slider:focus {
-	outline: var(--focus-outline) solid var(--focus-color2); /* Wit kader voor duidelijke focusindicatie */
-    outline-offset: 0.2em; /* Ruimte tussen de knop en het focuskader */
-	
+	outline: none;
 }
 
 #volume-slider:focus::-webkit-slider-thumb {
@@ -518,7 +515,13 @@ nav a:hover {
     height: 4em; /* Vergroot de thumb bij interactie */
 	outline: var(--focus-outline) solid var(--focus-color2); /* Wit kader voor duidelijke focusindicatie */
     outline-offset: 0.5em; /* Ruimte tussen de knop en het focuskader */
-	z-index: 2000;
+}
+
+#volume-slider:active::-webkit-slider-thumb {
+    width: 4em; /* Vergroot de thumb bij interactie */
+    height: 4em; /* Vergroot de thumb bij interactie */
+	outline: var(--focus-outline) solid var(--focus-color2); /* Wit kader voor duidelijke focusindicatie */
+    outline-offset: 0.5em; /* Ruimte tussen de knop en het focuskader */
 }
 
 /*Transition STYLING*/
