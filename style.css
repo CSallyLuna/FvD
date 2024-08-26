@@ -427,7 +427,7 @@ nav a:hover {
     width: 100%;
 	padding: 1em;
     display: flex;
-    justify-content: center; /* Centreer de items horizontaal */
+    justify-content: right; /* Centreer de items horizontaal */
     align-items: center; /* Centreer de items verticaal */
     gap: 1em;
     z-index: 1000; /* Zorg dat de knop boven andere elementen blijft */
@@ -463,20 +463,25 @@ nav a:hover {
 /************************************************************************/
 /* ♪ ♪ ♪ ♪ ♪ ♪ ♪ ACHTERGROND MUZIEK - VOLUME SLIDER ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
 /***********************************************************************/
+/* bron: GPT BOT, FRONTEND DEVELOPMENT TEACHER,https://chatgpt.com/share/e2618cf0-7c38-4cab-bd2d-e1854b12e153 */
 
 #volume-slider {
-	flex-grow: 1; /* Bepaal een vaste breedte voor de schuifregelaar */
+	flex-grow: 1; /* Laat de slider alle resterende ruimte innemen */
     height: 1em;
-    padding: 0.5em; /* Voeg binnenruimte toe voor een consistent uiterlijk met de knop */
-    border-radius: 1em; /* Ronde vorm, net als de knop */
-    background-color: var(--music-controls); /* Zelfde achtergrondkleur als de muziekknop */
+    padding: 0.5em; 
+    border-radius: 1em; 
+    background-color: var(--music-controls); 
+	box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
+
     -webkit-appearance: none; /* Verwijder standaard styling voor webkit-browsers */
     appearance: none; /* Verwijder standaard styling */
+
     cursor: pointer; /* Geef aan dat het element interactief is */
-    box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
+    
 	order: 1;
-	transition: width 0.3s ease, height 0.3s ease;
-	transform-origin: right bottom; /* Verander het draaipunt naar rechtsonder */
+	transition: opacity 0.3s ease, flex-grow 0.3s ease; /* Gebruik max-height voor een vloeiende overgang */
+	opacity: 1;
+	/*max-width: 100%;*/
 }
 
 /* Styling voor de slider thumb (het schuifbare deel van de slider) */
@@ -486,9 +491,9 @@ nav a:hover {
     width: 2em; /* Bepaal de breedte van de thumb */
     height: 2em; /* Bepaal de hoogte van de thumb */
     background-color: white; /* Maak de thumb licht van kleur voor contrast */
-    border-radius: 1em; /* Maak de thumb rond */
+    border-radius: 50%; /* Maak de thumb rond */
     box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
-	transition: width 0.3s ease, height 0.3s ease; /* Zachte overgang voor grootteverandering */
+	transition: width 0.2s ease, height 0.3s ease; /* Zachte overgang voor grootteverandering */
 }
 
 /*FOCUS STYLING*/
@@ -503,8 +508,18 @@ nav a:hover {
     height: 4em; /* Vergroot de thumb bij interactie */
 }
 
+/*Transition STYLING*/
+#volume-slider.hidden {
+	opacity: 0;
+    flex-grow: 0;
+    overflow: hidden; /* Zorg ervoor dat de slider netjes verdwijnt */
+}
 
+#volume-slider.visible {
+	opacity: 1;
+	flex-grow: 1; /* Zorg ervoor dat de slider volledig zichtbaar is */
 
+}
 
 
 /***************/
