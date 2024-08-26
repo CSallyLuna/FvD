@@ -19,7 +19,7 @@
 	--fourth-color:#FFDCA4;
 	--music-controls:#D04D01;
 	--focus-color:	#9785ff;
-	--focus-color2: #65ffff;
+	--focus-color2: #ffc800;
 	--focus-outline:0.5em;
 	--my-radius:3.75em;
 	
@@ -441,6 +441,8 @@ nav a:hover {
     gap: 1em;
     z-index: 1000; /* Zorg dat de knop boven andere elementen blijft */
     text-align: center; /* Zorg ervoor dat de inhoud gecentreerd is */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+	
 }
 
 /* styling voor de muziekknop */
@@ -503,6 +505,7 @@ nav a:hover {
     border-radius: 50%; /* Maak de thumb rond */
     box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
 	transition: width 0.2s ease, height 0.3s ease; /* Zachte overgang voor grootteverandering */
+	z-index: 10;
 }
 
 /*FOCUS STYLING*/
@@ -510,11 +513,13 @@ nav a:hover {
 	outline: none;
 }
 
+
 #volume-slider:focus::-webkit-slider-thumb {
     width: 4em; /* Vergroot de thumb bij interactie */
     height: 4em; /* Vergroot de thumb bij interactie */
 	outline: var(--focus-outline) solid var(--focus-color2); /* Wit kader voor duidelijke focusindicatie */
     outline-offset: 0.5em; /* Ruimte tussen de knop en het focuskader */
+	z-index: 10;
 }
 
 #volume-slider:active::-webkit-slider-thumb {
@@ -522,6 +527,7 @@ nav a:hover {
     height: 4em; /* Vergroot de thumb bij interactie */
 	outline: var(--focus-outline) solid var(--focus-color2); /* Wit kader voor duidelijke focusindicatie */
     outline-offset: 0.5em; /* Ruimte tussen de knop en het focuskader */
+	z-index: 10;
 }
 
 /*Transition STYLING*/
