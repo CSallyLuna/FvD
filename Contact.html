@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Caynalin Bedoya">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lofi Studio - Home</title>
+    <link href="styles/Contact.css" rel="stylesheet">
+    <!-- LOGO IN TAB ICON -->
+    <link rel="icon" type="image/svg+xml" href="images/Lofi_Girl-1024x1024.png">
+    <!-- GOOGLE FONT: KANIT -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap">
+</head>
+
+<body aria-label="You find yourself now in the lofi studio, Contact webpage">
+    <header>
+        <!-- Logo -->
+        <a href="Index.html" aria-hidden="true">
+            <img src="images/lofi studio logo donker.png" alt="Lofi studio home page">
+        </a>
+
+        <!-- Open button -->
+        <!-- The button is not relevant for screen readers -->
+        <!-- Using aria-hidden="true" hides the button from the screen reader-->
+        <button  aria-hidden="true">
+            <div></div>
+            <div></div>
+            <div></div> 
+        </button>
+
+        <!-- Menu --> 
+        <nav aria-label="Explore our webpage with the following links"> 
+            <!-- Close button -->
+            <!-- The button is also not relevant for screen readers -->
+            <!--s
+            <button aria-hidden="true">
+                <img src="images/Close-hamburger-menu-icon.svg" alt="Close menu button" />
+            </button>
+            -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Our-services.html">Our services</a></li>
+                <li><a href="Our-projects.html">Our projects</a></li>
+                <li><a href="Jobs.html">Jobs</a></li>
+                <li><a href="Contact.html"  aria-current="page">Contact us</a></li>
+            </ul>
+        </nav>
+        <a href="contact.html">Contact us</a>
+    </header>
+
+    <main  aria-label="Start of Contact page content">
+
+        <header  style="background-image: url('images/Lofi-Girl-DIY.webp');">
+                <!-- Title: Contact Page -->
+                <h1 id="contact-form-section"><span class="visually-hidden">Welcome to the Contact page of Lofi Studio</span>Contact us</h1>
+                <h2>Send us a message and we’ll get back to you within 4 business days!</h2>
+        </header>
+
+        <section aria-labelledby="contact-form-section">
+            <p>If you prefer, you can also reach out to us through Discord by <a href="https://discord.com" target="_blank">clicking this link</a>. Please include a brief description of your project, your budget as well as your deadline in your message.</p>
+            
+            <form action="/submit" method="POST">
+
+                <!-- First Name field -->
+                <!-- 'label' is used to describe the input field. 'for' attribute connects the label to the input with the matching 'id'. -->
+                <fieldset>
+                    <label for="first-name">First Name:</label>
+                    <!-- 'input' is a field where users type their first name. 'type="text"' means it accepts text. 'required' means users must fill it out. -->
+                    <input type="text" id="first-name" name="first-name" placeholder="Your first name" required aria-required="true">
+                </fieldset>
+            
+                <!-- Last Name field -->
+                <fieldset>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Your last name" required aria-required="true">
+                </fieldset>
+            
+                <!-- Email Address field -->
+                <!-- 'type="email"' makes sure the input is in the form of an email (like user@example.com). -->
+                <fieldset>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required aria-required="true">
+                </fieldset>
+            
+                <!-- Message field -->
+                <!-- 'textarea' is like a bigger input field for writing longer text, like a message. 'rows="5"' sets the height of the box. -->
+                <fieldset>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message" required aria-required="true"></textarea>
+                </fieldset>
+            
+                <!-- Submit Button -->
+                <!-- 'button' is what users click to send the form. -->
+                <button type="submit">Send</button>
+            </form>
+            <output id="confirmationMessage" class="hidden" aria-live="polite">
+                <p>Thank you! Your message has been sent successfully.</p>
+            </output>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="Index.html">
+            <img src="images/Lofi_Studio_Logo-1024x577.png" alt="Lofi studio home page">
+        </a>
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="Jobs.html">Jobs</a></li>
+            <li><a href="Our-projects.html">Our projects</a></li>
+            <li><a href="Our-services.html">Our services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="https://lofigirl.com/">Lofi Girl Website</a></li>
+        </ul>
+        <h4>Follow us</h4>
+        <ul>
+            <li><a href="https://www.instagram.com/lofistudio/">Instagram</a></li>
+            <li><a href="https://twitter.com/Lofi_Studio_">Twitter</a></li>
+            <li><a href="https://discord.com/invite/HMBTJfF7gp">Discord</a></li>
+        </ul>
+        <a href="Our-projects.html">See all projects</a>
+    </footer>
+
+    <script defer src="scripts/script.js"></script>
+
+</body>
+
+</html>
+
+
