@@ -52,7 +52,7 @@
     <main  aria-label="Start of home page content">
         
         <header style="background-image: url('images/Home_Background_Art.jpg');">
-            <!-- Title: Lofi Studio, text logo -->
+            <!-- TITLE: Lofi Studio, text logo -->
             <h1><span class="visually-hidden">Welcome to the home page of Lofi Studio</span><img src="images/Lofi_Studio_Logo-1024x577.png" alt="lofi studio logo" aria-hidden="true"></h1>
         </header>
 
@@ -85,14 +85,19 @@
 
         <!-- SECTION 2: THEY TRUST US -->
         <section  aria-describedby="section-title2">
-            <h2 id="section-title2" >They trust us</h2>
-            <h3>Big brands who chose Lofi Studio</h3>
+                <h2 id="section-title2" >They trust us</h2>
+                <h3>Big brands who chose Lofi Studio</h3>
             <ul>
-                <li><img src="images/LEGO.svg" alt="Lego Logo"></li>
-                <li><img src="images/bethesda.svg" alt="Bethesda Game Studios Logo"></li>
-                <li><img src="images/RocketL.svg" alt="Rocket League Logo"></li>
+                <li><img src="images/LEGO.svg" alt="Lego"></li>
+                <li><img src="images/bethesda.svg" alt="Bethesda Game Studios"></li>
+                <li><img src="images/RocketL.svg" alt="Rocket League"></li>
                 <li><img src="images/WATTPAD.svg" alt="Wattpad Logo"></li>
-            </ul>
+                <!-- Duplicate the logos to make the scrolling continuous -->
+                <li><img src="images/LEGO.svg" alt="Lego"  aria-hidden="true"></li>
+                <li><img src="images/bethesda.svg" alt="Bethesda Game Studios"  aria-hidden="true"></li>
+                <li><img src="images/RocketL.svg" alt="Rocket League"  aria-hidden="true"></li>
+                <li><img src="images/WATTPAD.svg" alt="Wattpad"  aria-hidden="true"></li>
+             </ul>
         </section>
 
         <!-- SECTION 3: OUR SERVICES -->
@@ -128,25 +133,29 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <a href="Index.html">
-            <img src="images/Lofi_Studio_Logo-1024x577.png" alt="Lofi studio home page">
+    <footer aria-label="This is the end of the webpage, check out the links to continue navigating">
+        <a href="Index.html" aria-label="Refresh Home Page">
+            <img src="images/Lofi_Studio_Logo-1024x577.png" alt="Lofi studio home page logo">
         </a>
-        <h4>Quick Links</h4>
-        <ul>
-            <li><a href="Jobs.html">Jobs</a></li>
-            <li><a href="Our-projects.html">Our projects</a></li>
-            <li><a href="Our-services.html">Our services</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-            <li><a href="https://lofigirl.com/">Lofi Girl Website</a></li>
-        </ul>
-        <h4>Follow us</h4>
-        <ul>
-            <li><a href="https://www.instagram.com/lofistudio/">Instagram</a></li>
-            <li><a href="https://twitter.com/Lofi_Studio_">Twitter</a></li>
-            <li><a href="https://discord.com/invite/HMBTJfF7gp">Discord</a></li>
-        </ul>
-        <a href="Our-projects.html">See all projects</a>
+        <section aria-labelledby="section-title4">
+            <h3 id="section-title4">Quick Links</h3>
+                <ul>
+                    <li><a href="https://lofigirl.com/">Lofi Girl Website</a></li>
+                    <li><a href="Our-projects.html">Our projects</a></li>
+                    <li><a href="Our-services.html">Our services</a></li>
+                    <li><a href="Jobs.html">Jobs</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+        </section>
+        <section aria-labelledby="section-title5">
+            <h3 id="section-title5">Follow us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/lofistudio/">Instagram</a></li>
+                    <li><a href="https://twitter.com/Lofi_Studio_">Twitter</a></li>
+                    <li><a href="https://discord.com/invite/HMBTJfF7gp">Discord</a></li>
+                </ul>
+        </section>
+        <a href="Our-projects.html" aria-hidden="true">See all projects</a>
     </footer>
 
     <script defer src="scripts/script.js"></script>

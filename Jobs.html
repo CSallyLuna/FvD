@@ -14,8 +14,7 @@
 </head>
 
 <body aria-label="You find yourself now in the lofi studio, Jobs webpage">
-
-    <header>
+    <header aria-label="Here you can find the navigation">
         <!-- Logo -->
         <a href="Index.html" aria-hidden="true">
             <img src="images/lofi studio logo donker.png" alt="Lofi studio home page">
@@ -31,7 +30,7 @@
         </button>
 
         <!-- Menu -->
-        <nav>
+        <nav aria-label="Explore our webpage with the following links"> 
             <!-- Close button -->
             <!-- The button is also not relevant for screen readers -->
             <!--
@@ -51,23 +50,24 @@
     </header>
 
     <main aria-label="Start of Jobs page content">
+
         <header style="background-image: url('images/Girl_Window_Night_Image-1536x866.jpg');">
             <!-- Title: Jobs Page -->
-            <h1><span class="visually-hidden">Welcome to the Jobs page of Lofi Studio</span>Freelance Artist</h1>
+            <h1><span class="visually-hidden">Job Title:</span>Freelance Artist</h1>
             <h2>We are looking for some new talented artists!</h2>
         </header>
         
-        <!-- SECTION -->
-        <section>
-            <h2>Job details</h2>
+        <!-- SECTIONS -->
+        <section aria-describedby="section-title-details">
+            <h2 id="section-title-details">Job details</h2>
             <p>Is Lofi Girl your go-to music channel for studying, drawing, chilling, or sleeping? Do you take great interest in the team behind the radios, compilations, etc., and how they help set tones and tell stories along with the music? We are now giving you the opportunity to get involved directly behind-the-scenes in creating stunning and innovative visuals for our upcoming projects to share with the world! Our team is very passionate about what we do, and our utmost goal is to share our love for lofi and relaxing music with the world, through our dreamy visuals and animations.</p>
         </section>
-        <section>
-            <h2>Job brief</h2>
+        <section aria-describedby="section-title-brief" >
+            <h2 id="section-title-brief">Job brief</h2>
             <p>As a Lofi Girl freelancer, you will be working closely with the rest of the creative team to create immersive and breathtaking illustrations, animations, or assets for our music, website, and many more projects to come. Be the first to know about upcoming projects and new additions to the Lofi Girl universe, and help bring them to life!</p>
         </section>
-        <section>
-            <h2>Responsibilities</h2>
+        <section aria-describedby="section-title-responsabilities">
+            <h2 id="section-title-responsabilities">Responsibilities</h2>
             <ul>
                 <li>
                     <p>Create high-quality HD animations, illustrations, or assets.</p>
@@ -86,8 +86,8 @@
                 </li>
             </ul>
         </section>
-        <section>
-            <h2>Requirements</h2>
+        <section aria-describedby="section-title-requirements">
+            <h2 id="section-title-requirements">Requirements</h2>
             <ul>
                 <li>
                     <p>Professional experiences in your domain.</p>
@@ -109,8 +109,8 @@
                 </li>
             </ul>
         </section>
-        <section>
-            <h2>Bonus</h2>
+        <section aria-describedby="section-title-bonus">
+            <h2 id="section-title-bonus">Bonus</h2>
             <ul>
                 <li>
                     <p>Familiar with the Lofi Girl universe.</p>
@@ -127,25 +127,29 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <a href="Index.html">
-            <img src="images/Lofi_Studio_Logo-1024x577.png" alt="Lofi studio home page">
+    <footer aria-label="This is the end of the webpage, check out the links to continue navigating">
+        <a href="Index.html" aria-label="Refresh Home Page">
+            <img src="images/Lofi_Studio_Logo-1024x577.png" alt="Lofi studio home page logo">
         </a>
-        <h4>Quick Links</h4>
-        <ul>
-            <li><a href="Jobs.html">Jobs</a></li>
-            <li><a href="Our-projects.html">Our projects</a></li>
-            <li><a href="Our-services.html">Our services</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-            <li><a href="https://lofigirl.com/">Lofi Girl Website</a></li>
-        </ul>
-        <h4>Follow us</h4>
-        <ul>
-            <li><a href="https://www.instagram.com/lofistudio/">Instagram</a></li>
-            <li><a href="https://twitter.com/Lofi_Studio_">Twitter</a></li>
-            <li><a href="https://discord.com/invite/HMBTJfF7gp">Discord</a></li>
-        </ul>
-        <a href="Our-projects.html">See all projects</a>
+        <section aria-labelledby="section-title4">
+            <h3 id="section-title4">Quick Links</h3>
+                <ul>
+                    <li><a href="https://lofigirl.com/">Lofi Girl Website</a></li>
+                    <li><a href="Our-projects.html">Our projects</a></li>
+                    <li><a href="Our-services.html">Our services</a></li>
+                    <li><a href="Jobs.html">Jobs</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+        </section>
+        <section aria-labelledby="section-title5">
+            <h3 id="section-title5">Follow us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/lofistudio/">Instagram</a></li>
+                    <li><a href="https://twitter.com/Lofi_Studio_">Twitter</a></li>
+                    <li><a href="https://discord.com/invite/HMBTJfF7gp">Discord</a></li>
+                </ul>
+        </section>
+        <a href="Our-projects.html" aria-hidden="true">See all projects</a>
     </footer>
 
     <script defer src="scripts/script.js"></script>
