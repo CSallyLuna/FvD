@@ -292,6 +292,13 @@ Dingen waar ik tegen aan liep:
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
+
+
+###### Notities En Bronnen ######
+Voor lees gemak adviseer ik mijn bronnen en notities via hier te lezen:
+**https://caynalin.notion.site/Frontend-Development-bae8676c80be4551affa17bd48315016?pvs=4**
+
+
  ### Please help me center <a href="Our-services.html">See all services</a> in the middle of the screen in a responsive way.
 
 - **Chat GPT’S answer**
