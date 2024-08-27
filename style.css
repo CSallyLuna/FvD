@@ -1,0 +1,862 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* kleuren */
+	--color-text-dark:#111;
+	--color-text-light:#ffffff;
+	--color-background:#FAEACC;
+	--secondary-color:#2A1A19;
+	--third-color: #F09C5E;
+	--contrast-third-color:#D76514;
+	--fourth-color:#FFDCA4;
+
+	--music-controls:#E17014;
+	--music-controls-playing:#E63600;
+	
+
+	/* focus */
+	--focus-color:	#537BFF;
+	--focus-outline:0.5em;
+	--focus-color-volume:#ffd000;
+
+	/* Shapes */
+	--my-radius:3.75em;
+	--box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1);
+
+	/* Font */
+	--main-font-family:'kanit', sans-serif;
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+/*  jouw code   */
+
+html {
+	scroll-behavior:smooth;
+}
+
+body {
+	font-family: 'kanit', sans-serif;
+	margin:0;
+	background-color:var(--color-background);
+}
+
+header, main, footer {
+    font-family: 'Kanit', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: var(--focus-outline) solid var(--focus-color);
+	outline-offset: 0.4em;	
+	border-radius: 1em;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 400;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+
+
+
+
+/******************************************************/
+/* styling voor de small-screen versie van de website */
+/******************************************************/
+
+
+
+/*******************************************************************/
+/* ♪ ♪ ♪ ♪ ♪ ♪ ♪  SCROLL INTO VIEW ANIMATIE  ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
+/******************************************************************/
+/* BRON: https://karlcleveland.com/js/animateIfInView.js */
+/* 
+De .animate klasse wordt toegevoegd aan elementen die je wilt animeren. 
+Hier zorgen we ervoor dat ze aanvankelijk verborgen zijn en iets naar beneden verschoven worden.
+*/
+.animate {
+	opacity: 0; /* Maakt het element onzichtbaar */
+    transform: translateY(1.4em); /* Verschuift het element 20 pixels naar beneden */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Bepaalt hoe snel de animatie moet gebeuren */
+}
+
+/* 
+Wanneer het element in beeld komt, wordt de in-view klasse toegevoegd.
+Dit zorgt ervoor dat het element zichtbaar wordt en terug naar zijn originele positie beweegt.
+*/
+.animate.in-view {
+    opacity: 1 ; /* Maakt het element zichtbaar */
+    transform: translateY(0); /* Verplaatst het element terug naar zijn originele positie */
+}
+
+
+
+/*Dit stukje CSS zorgt ervoor dat animaties worden uitgeschakeld 
+voor gebruikers die in hun systeeminstellingen hebben aangegeven 
+dat ze liever minder beweging zien.*/
+
+@media (prefers-reduced-motion: reduce) {
+    .animate {
+        transition: none; /* Schakelt de animatie-effecten uit */
+	}
+}
+
+
+
+
+/****************/
+/* HEADER */
+/****************/
+
+body > header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	height: 5em;
+	width: 100%;
+	padding-left: 1em;
+	padding-right: 1em;
+	background-color: var(--color-background);
+	display: flex;
+	flex-wrap: row;
+	gap: 1em; /* makes sure that gap is what it needs to be when out of mobile screen but below 42em*/
+	align-items: center;
+}
+
+/*
+  @media (min-width: 42em) {
+	body > header {
+		/* position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		height: 5em;
+		width: 100%;
+		padding-left: 2.125em;
+		padding-right: 2.125em;
+		background-color: var(--color-background);
+		display: flex;
+		flex-wrap: row;
+		align-items: center; 
+}*/
+	
+
+
+/****************/
+/* Contact us */
+/****************/
+body > header > a:last-of-type {
+    display: block;
+    padding: 0.75em 2.5em;
+    font: 0.875em, 'Kanit', sans-serif;
+	color: var(--secondary-color);
+	background-color: var(--third-color);
+	border-radius: 2em;
+}
+
+@media (max-width: 42em) {
+    body > header > a:last-of-type {
+        display:none;
+    }
+}
+
+@media (min-width: 42em) {
+    header nav li:last-child {
+		display: none; /* Hide the last list item */
+    }
+}
+
+nav ul li {
+    transition: opacity 0.02s ease; /* Add a transition property for opacity */
+}
+
+/***************************/
+/* BACKGROUND IMAGE COVER */
+/***************************/
+
+main > header {
+	position: relative;
+	overflow: hidden;
+
+	height: 100vh;
+
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+	background-image: url('images/Home_Background_Art.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/********************************/
+/*  LOGO in bar */
+/********************************/
+
+header a:first-of-type {
+	order:-1;
+	margin-right:auto;
+}
+
+header a img {
+	width: 10em;
+	height: 3em;
+}
+@media (max-width: 32em) {
+	header a img {
+		width: 6em;
+		height:2em;
+	}
+	
+}
+
+/********************************/
+/*  H1: LOFI STUDIO */
+/*************************8******/
+
+h1 {
+	position:absolute;
+	right:0;
+	left:0;
+	top:0;
+	bottom:0;
+	margin:0;
+	
+	Display:flex;
+	justify-content:center;
+	align-items:center;	
+}
+
+
+h1 img {
+	width:70%;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+/* Waarom? Helpt de png titel "lofi Studio" leesbaar zijn voor e-reader en leesbaar als de h1 */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 06em;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 0.06em;
+}
+
+
+
+/********/
+/* MENU */
+/********/
+
+/* attribuut selector */
+[aria-current="page"] {
+	color:var(--color-text-light);
+	background-color: var(--secondary-color);
+	
+	/* geeft niet gewenste resultaat */
+	left:0;
+	right:0;
+	/* hoe zorg ik ervoor dat deze een padding krijgt? */
+}
+
+
+nav {
+	/* JOUW CODE HIER - stap 1 */
+	position:absolute;
+	top:100%;
+	right:0;
+	left:0;
+
+	background-color: var(--color-background);
+
+	display:grid;
+	align-content:start;
+	gap:1em;
+
+	text-align:center;
+
+	/* JOUW CODE HIER - stap 2 */
+	/* translate:0% -100%; */
+
+	/* JOUW CODE HIER - stap 4 */
+	transition:.1s;
+
+	transform-origin: 50% 0%;
+	scale:1 0;
+}
+
+
+/* als menu open is */
+nav.open {
+	/* JOUW CODE HIER - stap 4 */
+	/* translate:0 0; */
+	transition:.5s;
+	/* top:3em; */
+	padding:0;
+	scale:1 1;
+}
+
+header nav a {
+	/* Styled text in hamburger menu */
+	text-transform:capitalize;
+	text-decoration: none;
+	color: var(--secondary-color);
+	/* Helpt ... */
+	display: block;
+	/* ... */
+	padding: 1em;
+
+}
+
+header button {
+	order:-1;
+}
+
+
+
+ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+
+}
+
+header nav li {
+	margin: 0;
+	width: 100%;
+	opacity: 0;
+	transition: .2s .3s;
+}
+
+nav.open li {
+	/* padding:10px 20px;; */
+	opacity: 1;
+	transition: .2s .5s;
+}
+
+/**********************/
+/* MENU OPEN BUTTON */
+/**********************/
+
+header > button {
+	position:relative;
+	background-color: rgba(255, 0, 0, 0); ;
+	border-style: none;
+	/* padding:1em; */
+	/* background-color:#F9EACC; */
+	
+	/* JOUW CODE HIER - stap 3 */
+	/* order:-1; */
+	width:2.5em;
+	aspect-ratio: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer; /* Pointer-cursor om klikbaarheid aan te geven */
+}
+
+header > button div:first-of-type, 
+header > button div:nth-child(2), 
+header > button div:nth-child(3) {
+	position: absolute;
+	width: 1.5em; 
+    height: 0.21em;
+	border-radius: 1em;
+    background-color: #333;
+	transition:.3s;
+   
+}
+
+header > button:hover{
+    color: var(--third-color);
+}
+
+/********************/
+/* MENU CLOSE BUTTON */
+/********************/
+
+
+header > button div:first-of-type {
+	transform: translate(0em, -0.38em);
+}
+
+
+header > button div:nth-child(3) {
+	transform: translate(0em,0.38em);
+
+}
+
+/***************/
+/* SLUIT BUTTON */
+/***************/
+
+header > button.open div:first-of-type {
+	transform: rotate(-45deg);
+}
+
+header > button.open div:nth-child(2) {
+	opacity:0;
+}
+
+header > button.open div:nth-child(3) {
+	transform: rotate(45deg);
+}
+
+/*******************************/
+/*  NAV HOVER EN FOCUS STATES */
+/*******************************/
+/* Hamburger icon and X */
+header > button:hover div {
+	background-color: var(--third-color);
+	transition: 0.2s;
+}
+
+header > button:focus {
+	outline: var(--focus-outline) solid var(--focus-color);
+	border-radius: var(--focus-outline);
+	outline-offset: 0.2	em;
+}
+
+/* List items */
+nav a:hover {
+	color: var(--color-text-light);
+	background-color: var(--secondary-color);
+}
+
+nav a:focus {
+	color: var(--color-text-light)	;
+	background-color: var(--focus-color);
+    outline: none;
+	border-radius: 0;		
+}
+
+/********************/
+/*  NAV Responsive */
+/*******************/
+
+/* @media (min-width: 63em) {
+	header nav ul {
+		display: flex;
+		flex-direction: row;
+
+	}
+	button, div{
+		display: none;
+	}
+} */
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************************/
+/**********************/
+/**********************/
+/*  HOME CONTENT */
+/***********************/
+/***********************/
+
+
+/********************************************************/
+/* ♪ ♪ ♪ ♪ ♪ ♪ ♪ ACHTERGROND MUZIEK ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
+/********************************************************/
+/*bron: GPT BOT, FRONTEND DEVELOPMENT TEACHER,https://chatgpt.com/share/e2618cf0-7c38-4cab-bd2d-e1854b12e153*/
+
+#music-controls {
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+	padding-top: 2.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+    display: flex;
+    justify-content: right; /* Centreer de items horizontaal */
+    align-items: center; /* Centreer de items verticaal */
+    gap: 1em;
+    z-index: 1000; /* Zorg dat de knop boven andere elementen blijft */
+    text-align: center; /* Zorg ervoor dat de inhoud gecentreerd is */
+	background: none;
+	transition: background-color 0.3s ease; /* Voor een soepele overgang als knop opent */
+}
+
+
+
+
+/* styling voor de muziekknop */
+#toggle-music {
+	order: 2;
+    background-color: var(--music-controls);/* Toegankelijk contrast op ale achtergronden op index html */
+    color: var(--color-text-light);
+    padding: 0.8em; /* Ruime binnenruimte voor klikbare gebieden */
+    border: none; 
+    border-radius: 1em; /* Ronde vorm */
+	font-family: 'Kanit', sans-serif;
+    font-size: 1em; /* Leesbare lettergrootte */
+	font-weight: 500;
+    text-align: center; /* Centreer de tekst */
+    box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
+    transition: background-color 0.3s ease; /* Zachte overgang voor kleurveranderingen */
+	cursor: pointer; /* Pointer-cursor om klikbaarheid aan te geven */
+}
+
+/* Focus-styling voor toetsenbordnavigatie */
+#toggle-music:focus {
+    outline:  var(--focus-outline) solid var(--focus-color); /* focusindicatie */
+    outline-offset: 0.4em; /* Ruimte tussen de knop en het focuskader */
+}
+
+#toggle-music.is-playing {
+	background-color:var(--music-controls-playing);
+}
+
+
+
+
+
+
+/************************************************************************/
+/* ♪ ♪ ♪ ♪ ♪ ♪ ♪ ACHTERGROND MUZIEK - VOLUME SLIDER ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
+/***********************************************************************/
+/* bron: GPT BOT, FRONTEND DEVELOPMENT TEACHER,https://chatgpt.com/share/e2618cf0-7c38-4cab-bd2d-e1854b12e153 */
+
+
+/* styling voor de volume regelaar */
+#volume-slider {
+	order: 1;
+	flex-grow: 1; /*Laat de slider alle resterende ruimte innemen */
+    height: 1em;
+    padding: 0.5em; 
+    border-radius: 1em; 
+    background-color: var(--music-controls-playing); 
+	box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
+    -webkit-appearance: none; /* Verwijder standaard styling voor webkit-browsers */
+    appearance: none; /* Verwijder standaard styling */
+	transition: opacity 0.3s ease, flex-grow 0.3s ease; /* Gebruik flex-grow voor een vloeiende overgang */
+	opacity: 1;
+	cursor: pointer; /* Geef aan dat het element interactief is */
+}
+
+/* Styling voor de slider thumb (het schuifbare deel van de slider) */
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Verwijder standaard styling voor webkit-browsers */
+    appearance: none; /* Verwijder standaard styling */
+    width: 2em; /* Bepaal de breedte van de thumb */
+    height: 2em; /* Bepaal de hoogte van de thumb */
+    background-color: white; /* Maak de thumb licht van kleur voor contrast */
+    border-radius: 50%; /* Maak de thumb rond */
+    box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
+	transition: width 0.2s ease, height 0.3s ease; /* Zachte overgang voor grootteverandering */
+}
+
+
+
+
+
+
+/* ♪ ♪ ♪ ♪ ♪ ♪ FOCUS STYLING ♪ ♪ ♪ ♪ ♪ ♪ */
+
+#volume-slider:focus {
+	outline: none;
+}
+
+
+#volume-slider:focus::-webkit-slider-thumb {
+    width: 4em; /* Vergroot de thumb bij interactie */
+    height: 4em; /* Vergroot de thumb bij interactie */
+	outline: var(--focus-outline) solid var(--focus-color-volume); /* Wit kader voor duidelijke focusindicatie */
+    outline-offset: 0.4em; /* Ruimte tussen de knop en het focuskader */
+}
+
+#volume-slider:active::-webkit-slider-thumb {
+    width: 4em; /* Vergroot de thumb bij interactie */
+    height: 4em; /* Vergroot de thumb bij interactie */
+	outline: var(--focus-outline) solid var(--focus-color-volume); /* Wit kader voor duidelijke focusindicatie */
+    outline-offset: 0.5em; /* Ruimte tussen de knop en het focuskader */
+}
+
+
+
+
+
+/* ♪ ♪ ♪ ♪ ♪ ♪ TRANSITION STYLING FOR JAVASCRIPT♪ ♪ ♪ ♪ ♪ ♪ */
+
+
+
+#volume-slider.hidden {
+	opacity: 0;
+    flex-grow: 0;
+    overflow: hidden; /* Zorg ervoor dat de slider netjes verdwijnt */
+}
+
+#volume-slider.visible {
+	opacity: 1;
+	flex-grow: 1; /* Zorg ervoor dat de slider volledig zichtbaar is */
+	
+}
+
+#music-controls.playing {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(38, 38, 38) 100%);
+}
+
+
+/********************************************/
+/***************** SECTIONS *****************/
+/*********************************************/
+
+main section {
+	margin-top:2.8em;
+	margin-bottom:2.8em;
+
+	margin-left:1.21875em;
+	margin-right:1.21875em;
+	border-radius: var(--my-radius);
+}
+
+main section a {
+	padding:0.75em 5em; 
+	border-radius: var(--my-radius);
+	text-align: center;
+	color:var(--color-text-light);
+	background-color: var(--contrast-third-color);
+}	
+
+main section a:focus{
+	outline: var(--focus-outline) solid var(--focus-color); /* Zorgt voor een duidelijke focus */
+}
+
+
+
+@media (max-width: 31.25em) {
+	main section a {
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+main section img {
+	border-radius: var(--my-radius);
+}
+
+main section h2 {
+	font-family: 'Kanit',sans-serif;
+	font-size:  2.1875em;
+	font-weight: 200;
+	margin:0;
+	
+}
+
+main section h3 {
+	font-family: 'Kanit',sans-serif;
+	font-size: 1.25em;
+	font-weight: 400;
+	margin:0;
+	
+}
+
+
+
+/*********************************/
+/*  SECTION 1: GET TO KNOW US */
+/*******************************/
+
+main section:first-of-type li {
+	display: flex;
+    flex-direction: column;
+	margin-top: 2em;
+}
+
+/********************************/
+/*  SECTION 2: THEY TRUST US */
+/********************************/
+/* bron:  GPT BOT, FRONTEND DEVELOPMENT TEACHER, https://chatgpt.com/share/a8e73965-7b76-43e3-8469-59b4305b86bb*/
+
+/* Style de hele sectie "They trust us" */
+main section:nth-of-type(2) {
+    display: flex; /* Gebruik flexbox om de inhoud netjes onder elkaar te plaatsen */
+    flex-direction: column; /* Plaats elementen (h2, h3, ul) verticaal */
+    justify-content: center; /* Centreer de inhoud verticaal binnen de sectie */
+    text-align: center; /* Centreer de tekst in de sectie */
+    background-color: var(--third-color); /* Geef de sectie een achtergrondkleur */
+    overflow: hidden; /* Verberg alles wat buiten de sectie valt, handig voor de scrollende animatie */
+    padding: 5em 0; /* Voeg ruimte boven en onder de sectie toe voor ademruimte */
+}
+
+/* Verklein de ruimte tussen h2 en h3 */
+main section:nth-of-type(2) h3 {
+    margin-top: 0.2em; /* Kleinere marge boven h3, verkleint de ruimte met h2 */
+    margin-bottom: 2em; /* Grotere marge onder h3, vergroot de ruimte met de ul */
+}
+
+/* Style de lijst met logo's */
+main section:nth-of-type(2) ul {
+    display: flex; /* Gebruik flexbox om de logo's in een rij te plaatsen */
+    align-items: center; /* Centreer de logo's verticaal in hun rij */
+    gap: 4em; /* Voeg ruimte toe tussen elk logo */
+    width: 200%; /* Verbreed de lijst naar 200% om ruimte te maken voor continu scrollen */
+    animation: scroll 10s linear infinite; /* Maak de lijst continu scrollend, duurt 10 seconden per cyclus */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Verwijder standaard lijststijl */
+}
+
+/* Individuele lijstitems (li) */
+main section:nth-of-type(2) li {
+    flex: 0 0 20%; /* Zorg ervoor dat elk logo een gelijk deel van de totale breedte inneemt */
+}
+
+/* Definieer de scroll animatie */
+@keyframes scroll {
+    0% {
+        transform: translateX(0%); /* Begin met de lijst in zijn oorspronkelijke positie */
+    }
+    100% {
+        transform: translateX(-50%); /* Verplaats de lijst naar links over 50% van zijn breedte */
+    }
+}
+
+/* Style de logo afbeeldingen */
+main section:nth-of-type(2) ul img {
+    width: 100%; /* Zorg ervoor dat de afbeeldingen de volledige breedte van hun container vullen */
+    border-radius: 0; /* Verwijder afrondingen van de hoeken */
+}
+
+
+  
+
+/****************************/
+/*  SECTION 3: Our services*/
+/****************************/
+
+main section:nth-of-type(3) article{
+	background-color: var(--fourth-color);
+	border-radius: var(--my-radius);
+	padding: 2em;
+	margin-bottom: 1em;
+}
+
+main section:nth-of-type(3) h2 {
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+
+main section:nth-of-type(3) p {
+	margin-top: 1em;
+}
+
+main section:nth-of-type(3) img {
+	height: 20em;
+	object-fit: cover;
+	max-width: 100%;
+}
+
+main section:nth-of-type(3) a[href="Our-services.html"] {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em; 
+}
+
+/* Adjust padding and styles as needed */
+@media (max-width: 32em) {
+    main section:nth-of-type(3) a[href="Our-services.html"] {
+        padding: 0.75em; /* Adjust padding for smaller screens */
+    }
+}
+
+/****************************/
+/*  SECTION: See all jobs*/
+/**************************/
+main section:nth-of-type(4) {
+	color: var(--color-text-light);
+	background-color: var(--secondary-color);
+	text-align: center;
+	padding: 1.5em;
+	
+}
+
+
+/***************/
+/*  FOOTER */
+/***************/
+footer {
+	padding-top:4.875em;
+	padding-bottom:4.875em;
+
+	padding-left: 3%;
+	padding-right: 3%;
+	background-color: var(--secondary-color);
+}
+
+
+footer h3 {
+	color: var(--third-color);
+	font-size: 1.75em;
+	font-weight: 400;
+	margin:0;
+}
+
+footer a {
+	color: var(--color-text-light);
+}
+
+footer > a:last-of-type {
+	padding:0.75em 5em; 
+	border-radius: var(--my-radius);
+	text-align: center;
+	color:var(--secondary-color);
+	background-color:var(--third-color);
+}
+
+footer a img {
+	width: auto;
+	height: 6em;
+}
+
+footer ul{
+	margin-bottom: 1em;
+}
+
+footer li {
+	color:black;
+	opacity:100;
+}
+
+footer > a[href="Our-projects.html"] {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+	margin-top:2em;
+	margin-bottom:2em;
+}
+
+
+
+
+
