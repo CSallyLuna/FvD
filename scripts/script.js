@@ -20,16 +20,29 @@ function openNav() {
   deOpenButton.classList.toggle("open")
 }
 
+
+
+
+
 /******************************/
 /******************************/
 
-/* SURFACE PLANE FEATURES */
+/* SURFACE PLANE  */
+
+// 2 Microinteracties 
+// 1 Form
+// 1 Scroll Animatie
 
 /******************************/
 /******************************/
+
+
+
+
+
 
 /********************************************************/
-/* ♪ ♪ ♪ ♪ ♪ ♪ ♪ 1. ACHTERGROND MUZIEK ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪*/
+/* ♪ ♪ ♪ ♪ ♪ ♪ ♪  ACHTERGROND MUZIEK ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪*/
 /********************************************************/
 //bron: GPT BOT, FRONTEND DEVELOPMENT TEACHER,https://chatgpt.com/share/e2618cf0-7c38-4cab-bd2d-e1854b12e153
 
@@ -45,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Verberg de volumeregelaar standaard wanneer de pagina wordt geladen
   volumeSlider.classList.add('hidden'); //doet niet wat ik wil, Ik wil dat de volume slider niet zichtbaar is als de pagina laadt. 
-  
 
   // Als er op de knop wordt geklikt, moet deze code uitgevoerd worden
   toggleMusicButton.addEventListener('click', function() {
@@ -70,20 +82,67 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   /*************************************************************/
-  /* ♪ ♪ ♪ ♪ ♪ 2. ACHTERGROND MUZIEK - VOLUME SLIDER ♪ ♪ ♪ ♪ ♪ ♪ */
+  /* ♪ ♪ ♪ ♪ ♪  ACHTERGROND MUZIEK - VOLUME SLIDER ♪ ♪ ♪ ♪ ♪ ♪ */
   /*************************************************************/
   //bron: GPT BOT, FRONTEND DEVELOPMENT TEACHER,https://chatgpt.com/share/b51247dd-f5d1-4bae-9ec3-6133d757c4cd 
   //bron 2: https://www.a11ywithlindsey.com/blog/creating-accessible-range-slider-css
 
   // Event listener om het volume aan te passen wanneer de gebruiker de schuifregelaar beweegt
   volumeSlider.addEventListener('input', function() {
+
     music.volume = this.value / 100; //Zet het volume van de muziek op basis van de slidewaarde
     this.setAttribute('aria-valuenow', this.value);
   });
 });
 
+
+
+
+/*******************************************************************/
+/* ♪ ♪ ♪ ♪ ♪ ♪ ♪  SCROLL INTO VIEW ANIMATIE  ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
+/******************************************************************/
+//BRON: https://karlcleveland.com/js/animateIfInView.js
+
+// Trigger CSS Animations when elements are scrolled into view
+
+// This JS uses the Intersection Observer API to determine if objects are within the viewport
+// It addes an 'in-view' class to elements when they come into view (and removes the class when not on screen)
+// Use to add @keyframe or transition animations to elements so they animate once they are on screen
+
+//TO USE
+// Simply add the .animate class to those HTML elements that you wish to animate. For example, <h1 class="animate">
+// Once in the viewport, the JS will add the 'in-view' class to those elements. For example, <h1 class="animate in-view">
+// Define your CSS to enable animations once that element is in view. For example, h1.in-view { }
+
+// Dit zorgt ervoor dat de code pas wordt uitgevoerd nadat de hele pagina geladen is
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Document is loaded and script is running.");
+
+// Hier maken we een Intersection Observer aan, die let op wanneer elementen in beeld komen
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+      // Als het element in beeld is, voegen we de 'in-view' klasse toe om de animatie te starten
+      if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          return;
+      }
+      // Als het element niet meer in beeld is, verwijderen we de 'in-view' klasse
+      entry.target.classList.remove('in-view');
+  });
+});
+
+// We selecteren alle elementen die de 'animate' klasse hebben
+const allAnimatedElements = document.querySelectorAll('.animate');
+
+// Voor elk element voegen we de observer toe, zodat de animatie getriggerd wordt wanneer het in beeld komt
+allAnimatedElements.forEach((element) => observer.observe(element));
+
+});
+
+
+
 /********************************************************/
-/* ♪ ♪ ♪ ♪ ♪ ♪ ♪ 3. CONTACT FORM  ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
+/* ♪ ♪ ♪ ♪ ♪ ♪ ♪  CONTACT FORM  ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
 /********************************************************/
 //bron: GPT BOT, FRONTEND DEVELOPMENT TEACHER, https://chatgpt.com/share/c82a3156-bdab-4753-b6cc-0bcb975b65af
 
@@ -111,5 +170,5 @@ form.addEventListener('submit', function(event) {
     // Stap 6: Verwijder/Reset het formulier.
     // form.reset() Hiermee worden alle velden in het formulier geleegd, zodat het weer klaar is voor nieuwe invoer.
     form.remove();
-});
 
+  });
