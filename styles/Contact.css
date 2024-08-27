@@ -3,28 +3,45 @@
 /**************/
 *, *::after, *::before {
 	box-sizing:border-box;  
-  }
+}
   
   
-  /*********************/
-  /* CUSTOM PROPERTIES */
-  /*********************/
-  :root {
-	  /* startje */
-	  --color-text-dark:#111;
-	  --color-text-light:#ffffff;
-	  --color-background:#FAEACC;
-	  --secondary-color:#2A1A19;
-	  --third-color: #F09C5E;
-	  --fourth-color:#FFDCA4;
-	  --my-radius:3.75em;
-	  
-  }
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* kleuren */
+	--color-text-dark:#111;
+	--color-text-light:#ffffff;
+	--color-background:#FAEACC;
+	--secondary-color:#2A1A19;
+	--third-color: #F09C5E;
+	--fourth-color:#FFDCA4;
+	--music-controls:#D04D01;
 
+	/* focus */
+	--focus-color:	#4ca5ff;
+	--focus-color2: #4ca5ff;
+	--focus-color3: #ff7b00;
+	--focus-outline:0.5em;
+
+	/* Shapes */
+	--my-radius:3.75em;
+
+	/* Font */
+	--main-font-family:'kanit', sans-serif;
+}
+  
 /****************/
 /* JOUW STYLING */
 /****************/
 /*  jouw code   */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
 	font-family: 'kanit', sans-serif;
@@ -40,21 +57,24 @@ a {
 	text-decoration: none;
 }
 
+a:focus {
+	outline: var(--focus-outline) solid var(--focus-color);
+	outline-offset: 0.4em;	
+	border-radius: 1em;
+}
+
 p {
 	font-size: 1em;
 	line-height: 1.5;
 	font-weight: 400;
-	margin:0;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
-
+  
 /******************************************************/
 /* styling voor de small-screen versie van de website */
 /******************************************************/
-
-
-
-
-
+  
 
 /****************/
 /* HEADER */
@@ -74,9 +94,9 @@ body > header {
 	flex-wrap: row;
 	gap: 1em; /* makes sure that gap is what it needs to be when out of mobile screen but below 42em*/
 	align-items: center;
-  }
+}
 
-  /*
+/*
   @media (min-width: 42em) {
 	body > header {
 		/* position: fixed;
@@ -91,10 +111,8 @@ body > header {
 		display: flex;
 		flex-wrap: row;
 		align-items: center; 
-	}*/
-	
-
-
+}*/
+  
 /****************/
 /* Contact us */
 /****************/
@@ -122,6 +140,7 @@ body > header > a:last-of-type {
 nav ul li {
     transition: opacity 0.02s ease; /* Add a transition property for opacity */
 }
+  
 
 /********************************/
 /*  LOGO in bar */
@@ -144,23 +163,21 @@ header a img {
 	
 }
 
-
-
 /********/
 /* MENU */
 /********/
 
-
 /* attribuut selector */
-	[aria-current="page"] {
-		color:var(--color-text-light);
-		background-color: var(--secondary-color);
-		
-		/* geeft niet gewenste resultaat */
-		left:0;
-		right:0;
-		/* hoe zorg ik ervoor dat deze een padding krijgt? */
-	}
+[aria-current="page"] {
+	color:var(--color-text-light);
+	background-color: var(--secondary-color);
+	
+	/* geeft niet gewenste resultaat */
+	left:0;
+	right:0;
+	/* hoe zorg ik ervoor dat deze een padding krijgt? */
+}
+
 
 nav {
 	/* JOUW CODE HIER - stap 1 */
@@ -192,14 +209,9 @@ nav {
 nav.open {
 	/* JOUW CODE HIER - stap 4 */
 	/* translate:0 0; */
-
-
 	transition:.5s;
-
 	/* top:3em; */
-	
 	padding:0;
-	
 	scale:1 1;
 }
 
@@ -207,13 +219,13 @@ header nav a {
 	/* Styled text in hamburger menu */
 	text-transform:capitalize;
 	text-decoration: none;
-	color: #2A1A19;
+	color: var(--secondary-color);
 	/* Helpt ... */
 	display: block;
 	/* ... */
 	padding: 1em;
 
-  }
+}
 
 header button {
 	order:-1;
@@ -231,9 +243,7 @@ ul {
 header nav li {
 	margin: 0;
 	width: 100%;
-
 	opacity: 0;
-
 	transition: .2s .3s;
 }
 
@@ -249,28 +259,19 @@ nav.open li {
 
 header > button {
 	position:relative;
-	
 	background-color: rgba(255, 0, 0, 0); ;
 	border-style: none;
-
 	/* padding:1em; */
 	/* background-color:#F9EACC; */
-
-
+	
 	/* JOUW CODE HIER - stap 3 */
 	/* order:-1; */
-
-	
 	width:2.5em;
 	aspect-ratio: 1;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer; /* Pointer-cursor om klikbaarheid aan te geven */
-	
-
-
 }
 
 header > button div:first-of-type, 
@@ -295,12 +296,12 @@ header > button:hover{
 
 
 header > button div:first-of-type {
-	transform: translate(0px, -6px);
+	transform: translate(0em, -0.38em);
 }
 
 
 header > button div:nth-child(3) {
-	transform: translate(0px, 6px);
+	transform: translate(0em,0.38em);
 
 }
 
@@ -325,8 +326,14 @@ header > button.open div:nth-child(3) {
 /*******************/
 /* Hamburger icon and X */
 header > button:hover div {
-	background-color: #F09C5E;
+	background-color: var(--third-color);
 	transition: 0.2s;
+}
+
+header > button:focus {
+	outline: var(--focus-outline) solid var(--focus-color);
+	border-radius: var(--focus-outline);
+	outline-offset: 0.2	em;
 }
 
 /* List items */
@@ -334,6 +341,21 @@ nav a:hover {
 	color: var(--color-text-light);
 	background-color: var(--secondary-color);
 }
+
+nav a:focus {
+	background-color: var(--focus-color2);
+    outline: none;
+	border-radius: 0;		
+}
+
+
+
+
+
+
+
+
+
 
 /******************************************************************************************/
 /**********************/
@@ -392,11 +414,10 @@ main > header h2 {
 	font-weight: 400;
 }
 
-section {
-
+main section {
 	display: flex;
     flex-direction: column;
-    gap: 2em; /* Space between child elements */
+    gap: 0.5emem; /* Space between child elements */
 
     margin: 2.8em auto; /* Center the section horizontally and set top/bottom margins */
 
@@ -411,6 +432,19 @@ form {
 	display: flex;
     flex-direction: column;
     gap: 0.5em; /* Ruimte tussen alle elementen in het formulier */
+}
+
+fieldset {
+	border: none;
+	display: flex;
+    flex-direction: column;
+    gap: 0.2em; /* Ruimte tussen alle elementen in het formulier */
+
+}
+
+main section label {
+	text-transform: capitalize;
+	font-weight: 100;
 }
 
 /* Text area styling */
@@ -442,7 +476,7 @@ button[type="submit"]:focus,
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    outline: 0.3em solid rgb(151, 187, 255); /* Wit kader voor duidelijke focusindicatie */
+    outline: var(--focus-outline) solid var(--focus-color); /* Wit kader voor duidelijke focusindicatie */
     outline-offset: 0.2em; /* Ruimte tussen de knop en het focuskader */
 }
 
@@ -453,7 +487,7 @@ input::placeholder,
 textarea::placeholder {
     color: #888; /* Change placeholder text color */
     opacity: 1; /* Ensure the placeholder is fully visible */
-	font-family: 'kanit', sans-serif;
+	font-family: var(--main-font-family);
 	font-size: 1.2em;
 	font-weight: 200;
 	text-transform: capitalize;
@@ -468,20 +502,23 @@ textarea::placeholder {
 
 }
 
-output {
+main section output {
 	margin-top: 1em;
-    color: var(--color-text-dark); /* Definieer deze variabele voor succesberichten */
-    font-size: 1.2em;
+    color: var(--color-text-light); /* Definieer deze variabele voor succesberichten */
+    font-size: 1.5em;
     text-align: center;
+	padding: 0.5em;
+	background-color: #93c77a;
+	border-radius: 1em;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1); /* Add a subtle shadow using em units */
 }
 
 
 
-
 /******************************************************************************************/
-/***********/
+/***************/
 /*  FOOTER */
-/***********/
+/***************/
 footer {
 	padding-top:4.875em;
 	padding-bottom:4.875em;
@@ -491,7 +528,8 @@ footer {
 	background-color: var(--secondary-color);
 }
 
-footer h4 {
+
+footer h3 {
 	color: var(--third-color);
 	font-size: 1.75em;
 	font-weight: 400;
@@ -531,4 +569,15 @@ footer > a[href="Our-projects.html"] {
 	margin-top:2em;
 	margin-bottom:2em;
 }
+
+
+
+
+
+
+
+
+
+
+
 

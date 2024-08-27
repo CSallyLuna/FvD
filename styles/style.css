@@ -10,7 +10,7 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
+	/* kleuren */
 	--color-text-dark:#111;
 	--color-text-light:#ffffff;
 	--color-background:#FAEACC;
@@ -18,17 +18,29 @@
 	--third-color: #F09C5E;
 	--fourth-color:#FFDCA4;
 	--music-controls:#D04D01;
-	--focus-color:	#9785ff;
-	--focus-color2: #ffc800;
+
+	/* focus */
+	--focus-color:	#4ca5ff;
+	--focus-color2: #4ca5ff;
+	--focus-color3: #ff7b00;
 	--focus-outline:0.5em;
+
+	/* Shapes */
 	--my-radius:3.75em;
-	
+
+	/* Font */
+	--main-font-family:'kanit', sans-serif;
 }
+
 
 /****************/
 /* JOUW STYLING */
 /****************/
 /*  jouw code   */
+
+html {
+	scroll-behavior:smooth;
+}
 
 body {
 	font-family: 'kanit', sans-serif;
@@ -46,7 +58,7 @@ a {
 
 a:focus {
 	outline: var(--focus-outline) solid var(--focus-color);
-	outline-offset: 0.2	em;
+	outline-offset: 0.4em;	
 	border-radius: 1em;
 }
 
@@ -57,6 +69,7 @@ p {
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
+
 
 
 
@@ -88,9 +101,9 @@ body > header {
 	flex-wrap: row;
 	gap: 1em; /* makes sure that gap is what it needs to be when out of mobile screen but below 42em*/
 	align-items: center;
-  }
+}
 
-  /*
+/*
   @media (min-width: 42em) {
 	body > header {
 		/* position: fixed;
@@ -105,7 +118,7 @@ body > header {
 		display: flex;
 		flex-wrap: row;
 		align-items: center; 
-	}*/
+}*/
 	
 
 
@@ -204,16 +217,21 @@ h1 img {
 .visually-hidden {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
-	height: 1px;
+	height: 06em;
 	overflow: hidden;
 	position: absolute;
 	white-space: nowrap;
-	width: 1px;
-  }
+	width: 0.06em;
+}
 
-  
-  /* attribuut selector */
-  [aria-current="page"] {
+
+
+/********/
+/* MENU */
+/********/
+
+/* attribuut selector */
+[aria-current="page"] {
 	color:var(--color-text-light);
 	background-color: var(--secondary-color);
 	
@@ -221,13 +239,8 @@ h1 img {
 	left:0;
 	right:0;
 	/* hoe zorg ik ervoor dat deze een padding krijgt? */
-  }
+}
 
-
-
-/********/
-/* MENU */
-/********/
 
 nav {
 	/* JOUW CODE HIER - stap 1 */
@@ -259,14 +272,9 @@ nav {
 nav.open {
 	/* JOUW CODE HIER - stap 4 */
 	/* translate:0 0; */
-
-
 	transition:.5s;
-
 	/* top:3em; */
-	
 	padding:0;
-	
 	scale:1 1;
 }
 
@@ -274,13 +282,13 @@ header nav a {
 	/* Styled text in hamburger menu */
 	text-transform:capitalize;
 	text-decoration: none;
-	color: #2A1A19;
+	color: var(--secondary-color);
 	/* Helpt ... */
 	display: block;
 	/* ... */
 	padding: 1em;
 
-  }
+}
 
 header button {
 	order:-1;
@@ -298,9 +306,7 @@ ul {
 header nav li {
 	margin: 0;
 	width: 100%;
-
 	opacity: 0;
-
 	transition: .2s .3s;
 }
 
@@ -316,28 +322,19 @@ nav.open li {
 
 header > button {
 	position:relative;
-	
 	background-color: rgba(255, 0, 0, 0); ;
 	border-style: none;
-
 	/* padding:1em; */
 	/* background-color:#F9EACC; */
-
-
+	
 	/* JOUW CODE HIER - stap 3 */
 	/* order:-1; */
-
-	
 	width:2.5em;
 	aspect-ratio: 1;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer; /* Pointer-cursor om klikbaarheid aan te geven */
-	
-
-
 }
 
 header > button div:first-of-type, 
@@ -362,12 +359,12 @@ header > button:hover{
 
 
 header > button div:first-of-type {
-	transform: translate(0px, -6px);
+	transform: translate(0em, -0.38em);
 }
 
 
 header > button div:nth-child(3) {
-	transform: translate(0px, 6px);
+	transform: translate(0em,0.38em);
 
 }
 
@@ -392,14 +389,26 @@ header > button.open div:nth-child(3) {
 /*******************/
 /* Hamburger icon and X */
 header > button:hover div {
-	background-color: #F09C5E;
+	background-color: var(--third-color);
 	transition: 0.2s;
+}
+
+header > button:focus {
+	outline: var(--focus-outline) solid var(--focus-color);
+	border-radius: var(--focus-outline);
+	outline-offset: 0.2	em;
 }
 
 /* List items */
 nav a:hover {
 	color: var(--color-text-light);
 	background-color: var(--secondary-color);
+}
+
+nav a:focus {
+	background-color: var(--focus-color2);
+    outline: none;
+	border-radius: 0;		
 }
 
 /********************/
@@ -418,6 +427,14 @@ nav a:hover {
 } */
 
 
+
+
+
+
+
+
+
+
 /******************************************************************************************/
 /**********************/
 /**********************/
@@ -429,6 +446,7 @@ nav a:hover {
 /********************************************************/
 /* ♪ ♪ ♪ ♪ ♪ ♪ ♪ ACHTERGROND MUZIEK ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
 /********************************************************/
+/*bron: GPT BOT, FRONTEND DEVELOPMENT TEACHER,https://chatgpt.com/share/e2618cf0-7c38-4cab-bd2d-e1854b12e153*/
 
 #music-controls {
 	position: fixed;
@@ -441,58 +459,64 @@ nav a:hover {
     gap: 1em;
     z-index: 1000; /* Zorg dat de knop boven andere elementen blijft */
     text-align: center; /* Zorg ervoor dat de inhoud gecentreerd is */
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-	
+	background: none;
+	transition: background-color 0.3s ease; /* Voor een soepele overgang als knop opent */
 }
+
+
+
 
 /* styling voor de muziekknop */
 #toggle-music {
+	order: 2;
     background-color: var(--third-color);
     color: var(--color-text-light);
     padding: 0.8em; /* Ruime binnenruimte voor klikbare gebieden */
     border: none; 
     border-radius: 1em; /* Ronde vorm */
-    cursor: pointer; /* Pointer-cursor om klikbaarheid aan te geven */
 	font-family: 'Kanit', sans-serif;
     font-size: 1em; /* Leesbare lettergrootte */
     text-align: center; /* Centreer de tekst */
     box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
     transition: background-color 0.3s ease; /* Zachte overgang voor kleurveranderingen */
-	order: 2;
+	cursor: pointer; /* Pointer-cursor om klikbaarheid aan te geven */
 }
 
 /* Focus-styling voor toetsenbordnavigatie */
 #toggle-music:focus {
     outline:  var(--focus-outline) solid var(--focus-color2); /* focusindicatie */
-    outline-offset: 0.5em; /* Ruimte tussen de knop en het focuskader */
+    outline-offset: 0.4em; /* Ruimte tussen de knop en het focuskader */
 }
 
 #toggle-music.is-playing {
 	background-color:var(--music-controls);
 }
 
+
+
+
+
+
 /************************************************************************/
 /* ♪ ♪ ♪ ♪ ♪ ♪ ♪ ACHTERGROND MUZIEK - VOLUME SLIDER ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
 /***********************************************************************/
 /* bron: GPT BOT, FRONTEND DEVELOPMENT TEACHER,https://chatgpt.com/share/e2618cf0-7c38-4cab-bd2d-e1854b12e153 */
 
+
+/* styling voor de volume regelaar */
 #volume-slider {
-	flex-grow: 1; /* Laat de slider alle resterende ruimte innemen */
+	order: 1;
+	flex-grow: 1; /*Laat de slider alle resterende ruimte innemen */
     height: 1em;
     padding: 0.5em; 
     border-radius: 1em; 
     background-color: var(--music-controls); 
 	box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
-
     -webkit-appearance: none; /* Verwijder standaard styling voor webkit-browsers */
     appearance: none; /* Verwijder standaard styling */
-
-    cursor: pointer; /* Geef aan dat het element interactief is */
-    
-	order: 1;
-	transition: opacity 0.3s ease, flex-grow 0.3s ease; /* Gebruik max-height voor een vloeiende overgang */
+	transition: opacity 0.3s ease, flex-grow 0.3s ease; /* Gebruik flex-grow voor een vloeiende overgang */
 	opacity: 1;
-	/*max-width: 100%;*/
+	cursor: pointer; /* Geef aan dat het element interactief is */
 }
 
 /* Styling voor de slider thumb (het schuifbare deel van de slider) */
@@ -505,10 +529,15 @@ nav a:hover {
     border-radius: 50%; /* Maak de thumb rond */
     box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
 	transition: width 0.2s ease, height 0.3s ease; /* Zachte overgang voor grootteverandering */
-	z-index: 10;
 }
 
-/*FOCUS STYLING*/
+
+
+
+
+
+/* ♪ ♪ ♪ ♪ ♪ ♪ FOCUS STYLING ♪ ♪ ♪ ♪ ♪ ♪ */
+
 #volume-slider:focus {
 	outline: none;
 }
@@ -518,8 +547,7 @@ nav a:hover {
     width: 4em; /* Vergroot de thumb bij interactie */
     height: 4em; /* Vergroot de thumb bij interactie */
 	outline: var(--focus-outline) solid var(--focus-color2); /* Wit kader voor duidelijke focusindicatie */
-    outline-offset: 0.5em; /* Ruimte tussen de knop en het focuskader */
-	z-index: 10;
+    outline-offset: 0.4em; /* Ruimte tussen de knop en het focuskader */
 }
 
 #volume-slider:active::-webkit-slider-thumb {
@@ -527,28 +555,39 @@ nav a:hover {
     height: 4em; /* Vergroot de thumb bij interactie */
 	outline: var(--focus-outline) solid var(--focus-color2); /* Wit kader voor duidelijke focusindicatie */
     outline-offset: 0.5em; /* Ruimte tussen de knop en het focuskader */
-	z-index: 10;
 }
 
-/*Transition STYLING*/
+
+
+
+
+/* ♪ ♪ ♪ ♪ ♪ ♪ TRANSITION STYLING FOR JAVASCRIPT♪ ♪ ♪ ♪ ♪ ♪ */
+
+
+
 #volume-slider.hidden {
 	opacity: 0;
     flex-grow: 0;
+	z-index: -1;
     overflow: hidden; /* Zorg ervoor dat de slider netjes verdwijnt */
 }
 
 #volume-slider.visible {
 	opacity: 1;
 	flex-grow: 1; /* Zorg ervoor dat de slider volledig zichtbaar is */
+	
+}
 
+#music-controls.playing {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(88, 57, 0) 100%);
 }
 
 
-/***************/
-/*  SECTIONS */
-/***************/
+/********************************************/
+/***************** SECTIONS *****************/
+/*********************************************/
 
-section {
+main section {
 	margin-top:2.8em;
 	margin-bottom:2.8em;
 
@@ -557,7 +596,7 @@ section {
 	border-radius: var(--my-radius);
 }
 
-section a {
+main section a {
 	padding:0.75em 5em; 
 	border-radius: var(--my-radius);
 	text-align: center;
@@ -565,21 +604,20 @@ section a {
 	background-color:var(--third-color);
 }	
 
-section a:focus{
+main section a:focus{
 	outline: var(--focus-outline) solid var(--focus-color); /* Zorgt voor een duidelijke focus */
 }
 
 
 
 @media (max-width: 31.25em) {
-	section a {
+	main section a {
 		width: 100%;
 		display: block;
 		margin: 0 auto;
 	}
 }
-
-section img {
+main section img {
 	border-radius: var(--my-radius);
 }
 
@@ -601,97 +639,101 @@ main section h3 {
 
 
 
-/***************/
+/*********************************/
 /*  SECTION 1: GET TO KNOW US */
-/***************/
+/*******************************/
 
-section:first-of-type li {
+main section:first-of-type li {
 	display: flex;
     flex-direction: column;
 	margin-top: 2em;
 }
 
-/***************/
+/********************************/
 /*  SECTION 2: THEY TRUST US */
-/***************/
+/********************************/
+/* bron:  GPT BOT, FRONTEND DEVELOPMENT TEACHER, https://chatgpt.com/share/a8e73965-7b76-43e3-8469-59b4305b86bb*/
 
-section:nth-of-type(2) {
-	display: grid;
-	grid-template-columns: 1fr;
-	column-gap: 1em;
-	background-color: var(--third-color);
-	text-align: center;
-	padding: 2em;
-	justify-content: center;
-  }
+/* Style de hele sectie "They trust us" */
+main section:nth-of-type(2) {
+    display: flex; /* Gebruik flexbox om de inhoud netjes onder elkaar te plaatsen */
+    flex-direction: column; /* Plaats elementen (h2, h3, ul) verticaal */
+    justify-content: center; /* Centreer de inhoud verticaal binnen de sectie */
+    text-align: center; /* Centreer de tekst in de sectie */
+    background-color: var(--third-color); /* Geef de sectie een achtergrondkleur */
+    overflow: hidden; /* Verberg alles wat buiten de sectie valt, handig voor de scrollende animatie */
+    padding: 5em 0; /* Voeg ruimte boven en onder de sectie toe voor ademruimte */
+}
+
+/* Verklein de ruimte tussen h2 en h3 */
+main section:nth-of-type(2) h3 {
+    margin-top: 0.2em; /* Kleinere marge boven h3, verkleint de ruimte met h2 */
+    margin-bottom: 2em; /* Grotere marge onder h3, vergroot de ruimte met de ul */
+}
+
+/* Style de lijst met logo's */
+main section:nth-of-type(2) ul {
+    display: flex; /* Gebruik flexbox om de logo's in een rij te plaatsen */
+    align-items: center; /* Centreer de logo's verticaal in hun rij */
+    gap: 4em; /* Voeg ruimte toe tussen elk logo */
+    width: 200%; /* Verbreed de lijst naar 200% om ruimte te maken voor continu scrollen */
+    animation: scroll 10s linear infinite; /* Maak de lijst continu scrollend, duurt 10 seconden per cyclus */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Verwijder standaard lijststijl */
+}
+
+/* Individuele lijstitems (li) */
+main section:nth-of-type(2) li {
+    flex: 0 0 20%; /* Zorg ervoor dat elk logo een gelijk deel van de totale breedte inneemt */
+}
+
+/* Definieer de scroll animatie */
+@keyframes scroll {
+    0% {
+        transform: translateX(0%); /* Begin met de lijst in zijn oorspronkelijke positie */
+    }
+    100% {
+        transform: translateX(-50%); /* Verplaats de lijst naar links over 50% van zijn breedte */
+    }
+}
+
+/* Style de logo afbeeldingen */
+main section:nth-of-type(2) ul img {
+    width: 100%; /* Zorg ervoor dat de afbeeldingen de volledige breedte van hun container vullen */
+    border-radius: 0; /* Verwijder afrondingen van de hoeken */
+}
+
+
   
-  section:nth-of-type(2) h3 {
-	font-size: 1em;
-  }
-  
-  section:nth-of-type(2) ul {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	list-style: none;
-	padding: 0;
-  }
-  
-  section:nth-of-type(2) li {
-	flex: 1 1 calc(50% - 1em);
-	max-width: calc(50% - 1em);
-  }
-  
-  section:nth-of-type(2) img {
-	width: 100%;
-	padding: 1.5625em;
-	margin-left: 0.625em;
-	border-radius: 0;
-  }
-  
-  @media (min-width: 32em) {
-	section:nth-of-type(2) {
-	  display: grid;
-	  grid-template-columns: 1fr 1fr;
-	  text-align: left;
-	}
-  
-	section:nth-of-type(2) h2,
-	section:nth-of-type(2) h3 {
-	  grid-column: 1 / -1; /* Span both columns */
-	  text-align: left; /* Align text to the left within the grid cell */
-	}
-	section:nth-of-type(2) ul {
-	  justify-content: flex-start; /* Align the list to the start (top) of its container */
-	}
-  }
-/***************/
+
+/****************************/
 /*  SECTION 3: Our services*/
-/***************/
+/****************************/
 
-section:nth-of-type(3) article{
+main section:nth-of-type(3) article{
 	background-color: var(--fourth-color);
 	border-radius: var(--my-radius);
 	padding: 2em;
 	margin-bottom: 1em;
 }
 
-section:nth-of-type(3) h2 {
+main section:nth-of-type(3) h2 {
 	text-align: center;
 	margin-bottom: 0.5em;
 }
 
-section:nth-of-type(3) p {
+main section:nth-of-type(3) p {
 	margin-top: 1em;
 }
 
-section:nth-of-type(3) img {
+main section:nth-of-type(3) img {
 	height: 20em;
 	object-fit: cover;
 	max-width: 100%;
 }
 
-section:nth-of-type(3) a[href="Our-services.html"] {
+main section:nth-of-type(3) a[href="Our-services.html"] {
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -700,15 +742,15 @@ section:nth-of-type(3) a[href="Our-services.html"] {
 
 /* Adjust padding and styles as needed */
 @media (max-width: 32em) {
-    section:nth-of-type(3) a[href="Our-services.html"] {
+    main section:nth-of-type(3) a[href="Our-services.html"] {
         padding: 0.75em; /* Adjust padding for smaller screens */
     }
 }
 
-/***************/
+/****************************/
 /*  SECTION: See all jobs*/
-/***************/
-section:nth-of-type(4) {
+/**************************/
+main section:nth-of-type(4) {
 	color: var(--color-text-light);
 	background-color: var(--secondary-color);
 	text-align: center;
@@ -729,7 +771,8 @@ footer {
 	background-color: var(--secondary-color);
 }
 
-footer h4 {
+
+footer h3 {
 	color: var(--third-color);
 	font-size: 1.75em;
 	font-weight: 400;
@@ -769,4 +812,8 @@ footer > a[href="Our-projects.html"] {
 	margin-top:2em;
 	margin-bottom:2em;
 }
+
+
+
+
 
