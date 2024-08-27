@@ -16,17 +16,21 @@
 	--color-background:#FAEACC;
 	--secondary-color:#2A1A19;
 	--third-color: #F09C5E;
+	--contrast-third-color:#D76514;
 	--fourth-color:#FFDCA4;
-	--music-controls:#D04D01;
+
+	--music-controls:#E17014;
+	--music-controls-playing:#E63600;
+	
 
 	/* focus */
-	--focus-color:	#4ca5ff;
-	--focus-color2: #4ca5ff;
-	--focus-color3: #ff7b00;
+	--focus-color:	#537BFF;
 	--focus-outline:0.5em;
+	--focus-color-volume:#ffd000;
 
 	/* Shapes */
 	--my-radius:3.75em;
+	--box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1);
 
 	/* Font */
 	--main-font-family:'kanit', sans-serif;
@@ -79,6 +83,41 @@ p {
 /******************************************************/
 
 
+
+/*******************************************************************/
+/* ♪ ♪ ♪ ♪ ♪ ♪ ♪  SCROLL INTO VIEW ANIMATIE  ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪ ♪   */
+/******************************************************************/
+/* BRON: https://karlcleveland.com/js/animateIfInView.js */
+/* 
+De .animate klasse wordt toegevoegd aan elementen die je wilt animeren. 
+Hier zorgen we ervoor dat ze aanvankelijk verborgen zijn en iets naar beneden verschoven worden.
+*/
+.animate {
+	opacity: 0; /* Maakt het element onzichtbaar */
+    transform: translateY(1.4em); /* Verschuift het element 20 pixels naar beneden */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Bepaalt hoe snel de animatie moet gebeuren */
+}
+
+/* 
+Wanneer het element in beeld komt, wordt de in-view klasse toegevoegd.
+Dit zorgt ervoor dat het element zichtbaar wordt en terug naar zijn originele positie beweegt.
+*/
+.animate.in-view {
+    opacity: 1 ; /* Maakt het element zichtbaar */
+    transform: translateY(0); /* Verplaatst het element terug naar zijn originele positie */
+}
+
+
+
+/*Dit stukje CSS zorgt ervoor dat animaties worden uitgeschakeld 
+voor gebruikers die in hun systeeminstellingen hebben aangegeven 
+dat ze liever minder beweging zien.*/
+
+@media (prefers-reduced-motion: reduce) {
+    .animate {
+        transition: none; /* Schakelt de animatie-effecten uit */
+	}
+}
 
 
 
@@ -384,9 +423,9 @@ header > button.open div:nth-child(3) {
 	transform: rotate(45deg);
 }
 
-/********************/
-/*  NAV Hover States */
-/*******************/
+/*******************************/
+/*  NAV HOVER EN FOCUS STATES */
+/*******************************/
 /* Hamburger icon and X */
 header > button:hover div {
 	background-color: var(--third-color);
@@ -406,7 +445,8 @@ nav a:hover {
 }
 
 nav a:focus {
-	background-color: var(--focus-color2);
+	color: var(--color-text-light)	;
+	background-color: var(--focus-color);
     outline: none;
 	border-radius: 0;		
 }
@@ -452,7 +492,10 @@ nav a:focus {
 	position: fixed;
     bottom: 0;
     width: 100%;
-	padding: 1em;
+	padding-top: 2.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
     display: flex;
     justify-content: right; /* Centreer de items horizontaal */
     align-items: center; /* Centreer de items verticaal */
@@ -469,13 +512,14 @@ nav a:focus {
 /* styling voor de muziekknop */
 #toggle-music {
 	order: 2;
-    background-color: var(--third-color);
+    background-color: var(--music-controls);/* Toegankelijk contrast op ale achtergronden op index html */
     color: var(--color-text-light);
     padding: 0.8em; /* Ruime binnenruimte voor klikbare gebieden */
     border: none; 
     border-radius: 1em; /* Ronde vorm */
 	font-family: 'Kanit', sans-serif;
     font-size: 1em; /* Leesbare lettergrootte */
+	font-weight: 500;
     text-align: center; /* Centreer de tekst */
     box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
     transition: background-color 0.3s ease; /* Zachte overgang voor kleurveranderingen */
@@ -484,12 +528,12 @@ nav a:focus {
 
 /* Focus-styling voor toetsenbordnavigatie */
 #toggle-music:focus {
-    outline:  var(--focus-outline) solid var(--focus-color2); /* focusindicatie */
+    outline:  var(--focus-outline) solid var(--focus-color); /* focusindicatie */
     outline-offset: 0.4em; /* Ruimte tussen de knop en het focuskader */
 }
 
 #toggle-music.is-playing {
-	background-color:var(--music-controls);
+	background-color:var(--music-controls-playing);
 }
 
 
@@ -510,7 +554,7 @@ nav a:focus {
     height: 1em;
     padding: 0.5em; 
     border-radius: 1em; 
-    background-color: var(--music-controls); 
+    background-color: var(--music-controls-playing); 
 	box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1); /* Zachte schaduw voor diepte */
     -webkit-appearance: none; /* Verwijder standaard styling voor webkit-browsers */
     appearance: none; /* Verwijder standaard styling */
@@ -546,14 +590,14 @@ nav a:focus {
 #volume-slider:focus::-webkit-slider-thumb {
     width: 4em; /* Vergroot de thumb bij interactie */
     height: 4em; /* Vergroot de thumb bij interactie */
-	outline: var(--focus-outline) solid var(--focus-color2); /* Wit kader voor duidelijke focusindicatie */
+	outline: var(--focus-outline) solid var(--focus-color-volume); /* Wit kader voor duidelijke focusindicatie */
     outline-offset: 0.4em; /* Ruimte tussen de knop en het focuskader */
 }
 
 #volume-slider:active::-webkit-slider-thumb {
     width: 4em; /* Vergroot de thumb bij interactie */
     height: 4em; /* Vergroot de thumb bij interactie */
-	outline: var(--focus-outline) solid var(--focus-color2); /* Wit kader voor duidelijke focusindicatie */
+	outline: var(--focus-outline) solid var(--focus-color-volume); /* Wit kader voor duidelijke focusindicatie */
     outline-offset: 0.5em; /* Ruimte tussen de knop en het focuskader */
 }
 
@@ -568,7 +612,6 @@ nav a:focus {
 #volume-slider.hidden {
 	opacity: 0;
     flex-grow: 0;
-	z-index: -1;
     overflow: hidden; /* Zorg ervoor dat de slider netjes verdwijnt */
 }
 
@@ -579,7 +622,7 @@ nav a:focus {
 }
 
 #music-controls.playing {
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(88, 57, 0) 100%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(38, 38, 38) 100%);
 }
 
 
@@ -600,8 +643,8 @@ main section a {
 	padding:0.75em 5em; 
 	border-radius: var(--my-radius);
 	text-align: center;
-	color:var(--secondary-color);
-	background-color:var(--third-color);
+	color:var(--color-text-light);
+	background-color: var(--contrast-third-color);
 }	
 
 main section a:focus{

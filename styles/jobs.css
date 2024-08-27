@@ -17,16 +17,17 @@
 	--secondary-color:#2A1A19;
 	--third-color: #F09C5E;
 	--fourth-color:#FFDCA4;
-	--music-controls:#D04D01;
+	--contrast-third-color:#D76514;
+	
 
 	/* focus */
-	--focus-color:	#4ca5ff;
-	--focus-color2: #4ca5ff;
-	--focus-color3: #ff7b00;
+	--focus-color:	#537BFF;
 	--focus-outline:0.5em;
+	--focus-color-volume:#ffd000;
 
 	/* Shapes */
 	--my-radius:3.75em;
+	--box-shadow: 0em 0.25em 0.38em rgba(0, 0, 0, 0.1);
 
 	/* Font */
 	--main-font-family:'kanit', sans-serif;
